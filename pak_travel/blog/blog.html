@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Travel Blog | Pak Travel Spark</title>
+
+  <link rel="stylesheet" href="blog.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="blog-nav">
+  <a href="../index-updated.html" class="logo">PAK <span>TRAVEL</span> SPARK</a>
+  <a href="../index-updated.html" class="back-home">Back to Home</a>
+</header>
+
+<section class="blog-hero">
+  <div class="blog-hero-content">
+    <span>Travel Stories & Guides</span>
+    <h1>Explore Pakistan Through Our Travel Blog</h1>
+    <p>Destination guides, family travel tips, budget planning, hotel advice, road routes, weather updates, and tour inspiration.</p>
+
+    <div class="blog-search">
+      <input type="text" id="blogSearch" placeholder="Search blogs e.g. Skardu, family trip, budget, hotels..." />
+      <button id="blogSearchBtn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+    </div>
+  </div>
+</section>
+
+<section class="featured-blog">
+  <div class="featured-image">
+    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1400&auto=format&fit=crop" alt="Northern Pakistan">
+    <span class="featured-badge">Featured Guide</span>
+  </div>
+
+  <div class="featured-content">
+    <span class="blog-label">Pakistan Travel</span>
+    <h2>Complete Guide to Planning a Northern Pakistan Tour</h2>
+    <p>Learn how to choose destination, budget, hotels, transport, weather season, and family-friendly routes for Hunza, Skardu, Naran, Swat, Chitral and Fairy Meadows.</p>
+
+    <div class="blog-meta">
+      <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+      <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+      <span><i class="fa-solid fa-location-dot"></i> Pakistan</span>
+    </div>
+
+    <button class="read-more-btn" data-id="0">Read Full Guide</button>
+  </div>
+</section>
+
+<section class="blog-main-section">
+  <div class="blog-toolbar">
+    <div>
+      <span class="mini-title">Latest Articles</span>
+      <h2>Travel Tips, Guides & Ideas</h2>
+    </div>
+
+    <div class="blog-categories">
+      <button class="category-btn active" data-category="all">All</button>
+      <button class="category-btn" data-category="destination">Destinations</button>
+      <button class="category-btn" data-category="budget">Budget</button>
+      <button class="category-btn" data-category="family">Family</button>
+      <button class="category-btn" data-category="hotels">Hotels</button>
+      <button class="category-btn" data-category="adventure">Adventure</button>
+    </div>
+  </div>
+
+  <div class="blog-layout">
+    <div class="blog-grid" id="blogGrid"></div>
+
+    <aside class="blog-sidebar">
+      <div class="sidebar-card">
+        <h3>Popular Tags</h3>
+        <div class="tags">
+          <button data-tag="hunza">Hunza</button>
+          <button data-tag="skardu">Skardu</button>
+          <button data-tag="naran">Naran</button>
+          <button data-tag="family">Family Trip</button>
+          <button data-tag="budget">Budget Tour</button>
+          <button data-tag="hotels">Hotels</button>
+          <button data-tag="adventure">Adventure</button>
+        </div>
+      </div>
+
+      <div class="sidebar-card newsletter-card">
+        <i class="fa-solid fa-envelope-open-text"></i>
+        <h3>Get Travel Updates</h3>
+        <p>Subscribe for tour tips, seasonal updates and new packages.</p>
+        <form id="newsletterForm">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <small id="newsletterStatus"></small>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Why Read Our Blog?</h3>
+        <ul class="why-list">
+          <li><i class="fa-solid fa-check"></i> Real travel planning tips</li>
+          <li><i class="fa-solid fa-check"></i> Destination-wise guides</li>
+          <li><i class="fa-solid fa-check"></i> Budget and hotel advice</li>
+          <li><i class="fa-solid fa-check"></i> Family-friendly recommendations</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="blog-modal" id="blogModal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose">&times;</button>
+    <img id="modalImage" src="" alt="">
+    <div class="modal-content">
+      <span id="modalCategory"></span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalBody"></p>
+    </div>
+  </div>
+</div>
+
+<footer class="blog-footer">
+  <p>© 2026 Pak Travel Spark. All rights reserved.</p>
+</footer>
+
+<script src="blog.js"></script>
+</body>
+</html>

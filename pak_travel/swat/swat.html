@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swat Valley Tour | Pak Travel Spark</title>
+  <link rel="stylesheet" href="swat.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header class="tour-detail-nav">
+  <a href="../index-updated.html" class="tour-logo">PAK <span>TRAVEL</span> SPARK</a>
+  <a href="../index-updated.html">Back to Home</a>
+</header>
+<section class="tour-split-hero">
+  <div class="hero-image hero-slider">
+  <div class="slides">
+    <img class="slide active" src="https://media.istockphoto.com/id/1490955053/photo/trees-in-the-forest-in-the-winter.jpg?s=612x612&w=0&k=20&c=JCEkcvpYhD6n20EC_vfhWQ-6g38PiaxW-sLcIaL5mQk=" alt="Malam Jabba Swat">
+    <img class="slide" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Swat green valley">
+    <img class="slide" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80" alt="Mountain lake">
+    <img class="slide" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80" alt="Snow mountains">
+    <img class="slide" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80" alt="Starry mountain Swat">
+    <img class="slide" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80" alt="Lake view">
+    <img class="slide" src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80" alt="Forest in Swat">
+    <img class="slide" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="River valley">
+    <img class="slide" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80" alt="Mountain landscape">
+    <img class="slide" src="https://images.unsplash.com/photo-1434394354979-a235cd36269d?auto=format&fit=crop&w=1200&q=80" alt="Kalam Swat view">
+  </div>
+  <button class="slider-btn prev" onclick="changeHeroSlide(-1)">❮</button>
+  <button class="slider-btn next" onclick="changeHeroSlide(1)">❯</button>
+  <div class="hero-overlay">
+    <span>5 Days / 4 Nights</span>
+    <h1>Swat Valley Tour</h1>
+    <p>Explore Malam Jabba, Kalam, Bahrain, Fizagat, Ushu Forest and Mahodand Lake.</p>
+  </div>
+</div>
+<div class="tour-map-card">
+      <div class="map-card-header">
+        <div>
+          <h2>Route to Swat</h2>
+          <p>Select your starting city to view route and estimated package price.</p>
+        </div>
+        <i class="fa-solid fa-route"></i>
+      </div>
+
+      <div class="start-location-box">
+        <label for="startLocation">Tour Start Location</label>
+        <select id="startLocation">
+          <option value="Lahore" data-price="26000">Lahore - Rs. 26,000 per person</option>
+          <option value="Islamabad" data-price="18000">Islamabad - Rs. 18,000 per person</option>
+          <option value="Rawalpindi" data-price="18000">Rawalpindi - Rs. 18,000 per person</option>
+          <option value="Multan" data-price="32000">Multan - Rs. 32,000 per person</option>
+          <option value="Rajanpur" data-price="37000">Rajanpur - Rs. 37,000 per person</option>
+          <option value="Karachi" data-price="46000">Karachi - Rs. 46,000 per person</option>
+          <option value="Khanewal" data-price="33000">Khanewal - Rs. 33,000 per person</option>
+          <option value="Chakwal" data-price="20000">Chakwal - Rs. 20,000 per person</option>
+          <option value="Attock" data-price="19000">Attock - Rs. 19,000 per person</option>
+          <option value="Bahawalpur" data-price="35000">Bahawalpur - Rs. 35,000 per person</option>
+          <option value="Gujranwala" data-price="28000">Gujranwala - Rs. 28,000 per person</option>
+          <option value="custom" data-price="0">Other City / Custom Location</option>
+        </select>
+        <input type="text" id="customLocation" placeholder="Enter your city, e.g. Bahawalpur" class="hide">
+        <div class="price-note">
+          <strong id="priceText">Rs. 18,000 per person</strong>
+          <span>Charges starting destination ke according change hon gy.</span>
+        </div>
+      </div>
+      <div class="hero-map">
+        <iframe id="routeMap" src="https://www.google.com/maps?q=Swat%20Valley%20Pakistan&output=embed" loading="lazy"></iframe>
+        <div class="route-box"><strong>Route Preview</strong><p id="routeText">Select your starting city in the form to show route to Swat Valley.</p></div>
+      </div>
+</div>
+</section>
+
+<section class="tour-detail-main single-column">
+  <div class="tour-detail-content">
+    <div class="tour-info-grid">
+      <div><i class="fa-solid fa-clock"></i><strong>Duration</strong><span>5 Days</span></div>
+      <div><i class="fa-solid fa-users"></i><strong>Group Size</strong><span>2-20 Persons</span></div>
+      <div><i class="fa-solid fa-hotel"></i><strong>Hotel</strong><span>Included</span></div>
+      <div><i class="fa-solid fa-car"></i><strong>Transport</strong><span>Included</span></div>
+    </div>
+
+    <section class="tour-panel booking-start-panel" id="bookingBox">
+      <h2>Do you want to book this Swat Valley tour?</h2>
+      <p>Click below. First login/register, then fill traveler details. Your start location, total payment, payment method and screenshot will be saved in booking record.</p>
+      <button id="startBookingBtn" class="primary-btn">Book Now</button>
+    </section>
+    <section class="tour-panel booking-flow hidden" id="authPanel">
+      <button class="close-auth-btn" id="closeAuthPanel">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h2>Login / Register</h2>
+      <p class="small-note">
+        Already registered user login karega.
+        New user register kar sakta hai.
+      </p>
+      <div class="auth-tabs">
+        <button class="active" data-auth="login">
+          Login
+        </button>
+        <button data-auth="register">
+          Register
+        </button>
+      </div>
+      <form id="authForm">
+        <input type="text"
+        id="authName"
+        placeholder="Full Name"
+        class="register-only hidden">
+        <input type="tel"
+        id="authPhone"
+        placeholder="Phone Number"
+        required>
+        <input type="password"
+        id="authPassword"
+        placeholder="Password"
+        required>
+        <button type="submit"
+        class="primary-btn"
+        id="authSubmitBtn">
+        Login
+      </button>
+    </form>
+  </section>
+
+    <section class="tour-panel booking-flow hidden" id="previousRecordPanel">
+      <h2>Your Previous Booking</h2>
+      <div id="previousBookingBox"></div>
+      <button id="newBookingBtn" class="secondary-btn">Make New Booking</button>
+    </section>
+
+    <section class="tour-panel booking-flow hidden" id="bookingFormPanel">
+      <h2>Traveler & Payment Details</h2>
+      <div class="seat-box"><span>Seats Left</span><strong id="seatsLeft">14</strong></div>
+      <form id="tourBookingForm">
+        <input type="hidden" id="tourName" value="Swat Valley Tour">
+        <div class="form-grid">
+          <input type="text" id="customerName" placeholder="Customer Name" required>
+          <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+          <input type="text" id="customerCnic" placeholder="CNIC / ID Card Number" required>
+          <input type="date" id="travelDate" required>
+          <input type="number" id="guestCount" placeholder="Total Travelers" min="1" required>
+          <input type="number" id="roomCount" placeholder="Total Hotel Rooms" min="1" value="1" required>
+          <input type="text" id="startCity" placeholder="From Location e.g. Lahore, Rajanpur, Islamabad" required>
+          <select id="hotelChoice" required>
+            <option value="standardHotel">Swat Serena Hotel - Standard</option>
+            <option value="premiumHotel">Rock City Resort Swat - Premium</option>
+            <option value="budgetGuestHouse">Budget Swat Guest House - Economy</option>
+            <option value="familyRoom">Family Room Hotel - Private</option>
+            <option value="honeymoonSuite">Honeymoon Suite - Couple Package</option>
+          </select>
+        </div>
+        <div class="price-preview">
+          <p><strong>Destination:</strong> Swat Valley</p>
+          <p><strong>Route:</strong> <span id="calculatedRoute">Please enter start city</span></p>
+          <p><strong>Selected Hotel:</strong> <span id="selectedHotelText">Please select hotel</span></p>
+          <p><strong>Transport + Tour Price:</strong> <span id="basePriceText">Rs. 0</span></p>
+          <p><strong>Child Policy:</strong> 0–4 years free, 5–8 years 50% charges, 9+ years full charges</p>
+          <p><strong>Hotel Rooms:</strong> <span id="roomCountText">1 room</span></p>
+          <p><strong>Hotel Charges:</strong> <span id="hotelPriceText">Rs. 0</span></p>
+          <p><strong>Total Payment:</strong> <span id="calculatedPrice">Rs. 0</span></p>
+        </div>
+        <div class="traveler-dynamic-area">
+          <h3>Travelers Information</h3>
+          <p class="small-note">Total travelers ke according fields automatically add hon gi. Child select karne par CNIC required nahi hoga. 0–4 years free, 5–8 years 50% charges, aur 9+ years full charges hon ge.</p>
+          <div id="travelerFields"></div>
+        </div>
+        <textarea id="bookingNote" placeholder="Special request / pickup detail"></textarea>
+
+        <h3 class="payment-title">Payment Option</h3>
+        <div class="payment-options">
+          <label><input type="radio" name="paymentType" value="No Advance" checked> No advance now</label>
+          <label><input type="radio" name="paymentType" value="Advance Payment"> Advance payment</label>
+          <label><input type="radio" name="paymentType" value="Full Payment"> Full payment</label>
+        </div>
+        <div class="account-box hidden" id="accountBox">
+          <h4>Admin Account Details</h4>
+          <p><strong>JazzCash/EasyPaisa:</strong> 0316-6564980</p>
+          <p><strong>Account Title:</strong> Pak Travel Spark</p>
+          <p><strong>Bank:</strong> HBL / Account No: 1234-567890-01</p>
+          <input type="file" id="paymentScreenshot" accept="image/*">
+          <small>Advance/full payment karne ke baad screenshot upload kar dein.</small>
+        </div>
+        <button type="submit" class="primary-btn">Submit Booking</button>
+      </form>
+      <div class="confirmation hidden" id="confirmationMsg"></div>
+    </section>
+
+    <section class="tour-panel">
+      <h2>Tour Overview</h2>
+      <p>Swat Valley is known as the Switzerland of Pakistan. This package is ideal for families, couples and groups who want green valleys, snowy peaks, waterfalls, rivers, chairlift rides, Kalam scenery and comfortable hotel stays.</p>
+    </section>
+
+    <section class="tour-panel">
+      <h2>Day-by-Day Itinerary</h2>
+      <div class="itinerary-item"><span>Day 1</span><div><h3>Departure to Swat</h3><p>Start from your selected city. Travel through motorway route and reach Mingora/Fizagat with scenic river views.</p></div></div>
+      <div class="itinerary-item"><span>Day 2</span><div><h3>Malam Jabba Visit</h3><p>Enjoy chairlift, zipline options, snow views in winter and photography at Malam Jabba.</p></div></div>
+      <div class="itinerary-item"><span>Day 3</span><div><h3>Bahrain & Kalam</h3><p>Drive towards Bahrain and Kalam, explore riverside views, bazaars and mountain scenery.</p></div></div>
+      <div class="itinerary-item"><span>Day 4</span><div><h3>Ushu Forest / Mahodand Lake</h3><p>Visit Ushu Forest and Mahodand Lake depending on road and weather conditions. Jeep charges may be separate.</p></div></div>
+      <div class="itinerary-item"><span>Day 5</span><div><h3>Return Journey</h3><p>Breakfast, checkout and return with short photo stops on the way.</p></div></div>
+    </section>
+
+    <section class="tour-panel hotel-section">
+      <h2>Famous Hotels & Restaurants in Swat Valley</h2>
+      <p class="small-note">Ye suggestions user attraction ke liye hain. Final hotel availability admin confirm karega.</p>
+      <div class="hotel-grid">
+        <article class="hotel-card clickable-hotel" role="button" tabindex="0" data-hotel="Swat Serena Hotel Mingora Swat Pakistan"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80" alt="Swat Serena Hotel"><h3>Swat Serena Hotel</h3><span><i class="fa-solid fa-location-dot"></i> Click to view map</span><p>Comfortable family stay with restaurant, parking and easy access to Mingora and Fizagat areas.</p></article>
+        <article class="hotel-card clickable-hotel" role="button" tabindex="0" data-hotel="Rock City Resort Swat Pakistan"><img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=700&q=80" alt="Rock City Resort Swat"><h3>Rock City Resort Swat</h3><span><i class="fa-solid fa-location-dot"></i> Click to view map</span><p>Premium-style stay option with scenic surroundings, restaurant service and modern rooms.</p></article>
+        <article class="hotel-card clickable-hotel" role="button" tabindex="0" data-hotel="Shelton Rezidor Swat Pakistan"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=700&q=80" alt="Shelton Rezidor Swat"><h3>Shelton Rezidor Swat</h3><span><i class="fa-solid fa-location-dot"></i> Click to view map</span><p>Good for families and groups who prefer comfortable rooms with easy access to Swat attractions.</p></article>
+      </div>
+    </section>
+
+    <section class="tour-panel include-grid"><div><h2>Included</h2><p><i class="fa-solid fa-check"></i> Hotel accommodation</p><p><i class="fa-solid fa-check"></i> Private/group transport</p><p><i class="fa-solid fa-check"></i> Driver support</p><p><i class="fa-solid fa-check"></i> Fuel and tolls</p></div><div><h2>Not Included</h2><p><i class="fa-solid fa-xmark"></i> Personal shopping</p><p><i class="fa-solid fa-xmark"></i> Extra meals</p><p><i class="fa-solid fa-xmark"></i> Jeep / entry tickets where not mentioned</p><p><i class="fa-solid fa-xmark"></i> Emergency expense</p></div></section>
+  </div>
+</section>
+ <section id="destinations">
+    <h2 class="section-title">Popular Destinations</h2>
+    <div class="grid">
+     <div class="card destination-card">
+       <a href="../lahore/lahore-updated.html"><img src="https://media.istockphoto.com/id/2227643268/photo/lahore-fort-also-known-as-shahi-qila-is-a-unesco-world-heritage-site-located-in-the-heart-of.webp?a=1&b=1&s=612x612&w=0&k=20&c=YzM8mhWIHpPx0rE0FZ3Few2x4lNFRQgl-teBDul5QGg=" alt="Lahore"></a>
+       <h3>Lahore</h3>
+       <p>Best Season: October to March</p>
+       <p>Route Difficulty: Easy</p>
+      </div>
+
+      <div class="card destination-card">
+        <a href="../fairy_meadows/fairy-meadows.html"><img src="https://media.istockphoto.com/id/1490968445/photo/lower-kachura-lake-and-majestic-mountains-unite-in-natures-serenade-enveloped-by-lush-greenery.jpg?s=612x612&w=0&k=20&c=PpXtwFSkDktvT-W5s4Q1Gz8yGC-7ZFAgzWi5eeQBZ6c=" alt="fairy meadows"></a>
+        <h3>fairy meadows</h3>
+        <p>Best Season: May to September</p>
+        <p>Route Difficulty: Hard</p>
+      </div>
+      <div class="card destination-card"> 
+        <a href="../naran-kaghan/naran-kaghan.html"><img src="https://media.istockphoto.com/id/1490955053/photo/trees-in-the-forest-in-the-winter.jpg?s=612x612&w=0&k=20&c=JCEkcvpYhD6n20EC_vfhWQ-6g38PiaxW-sLcIaL5mQk=" alt="Swat"></a>
+           <h3>Naran Kaghan</h3> <p>Best Season: Best Season: May to September</p> <p>Route Difficulty: Moderate</p> </div>
+      
+      <div class="card destination-card">
+        <a href="../hunza/hunza.html"><img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?q=80&w=1200&auto=format&fit=crop"
+        alt="Hunza Valley"></a>
+        <h3>Hunza Valley</h3>
+        <p>Best Season: April to October</p>
+        <p>Route Difficulty: Medium</p>
+      </div>
+    </div>
+  </section>
+<section class="tour-faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item"><button>Can I book without advance payment? <i class="fa-solid fa-plus"></i></button><p>Yes. User can select “No advance now” and submit the form. Admin can confirm payment later.</p></div>
+  <div class="faq-item"><button>Will price change by starting city? <i class="fa-solid fa-plus"></i></button><p>Yes. Price is automatically calculated according to starting city and guest count.</p></div>
+  <div class="faq-item"><button>Is hotel fixed? <i class="fa-solid fa-plus"></i></button><p>User selected hotel form ke record me save hoga. Final room availability admin confirm karega.</p></div>
+</section>
+<!-- FOOTER -->
+  <footer class="footer-pro">
+    <div class="footer-pro-container">
+      <div class="footer-pro-box footer-brand">
+        <h3>Pak Travel Spark</h3>
+        <img src="logo.png" alt="Pak Travel Spark Logo">
+        <p>Your trusted travel partner for Pakistan adventures, group tours, and custom trips.</p>
+      </div>
+
+        <div class="footer-pro-box">
+  <h3>Quick Links</h3>
+  <a href="../index-updated.html#destinations">Pakistan Tours</a>
+  <a href="../index-updated.html#group-tours">Group Tours</a>
+  <a href="../index-updated.html#reviews">Reviews</a>
+  <a href="../contact/contact.html">Contact Us</a>
+  <a href="../images/image.html">Gallery</a>
+  <a href="../blog/blog.html">Travel Blog</a>
+</div>
+
+      <div class="footer-pro-box">
+        <h3>Contact Info</h3>
+        <a href="tel:+923166564980"><i class="fa-solid fa-phone"></i> +92 316 656 4980</a>
+        <a href="mehikfatima3@gmail.com"><i class="fa-solid fa-envelope"></i> mehikfatima3@gmail.com</a>
+        <a href="https://www.google.com/maps?q=Allahabad%20Rajanpur%20Pakistan" target="_blank"><i class="fa-solid fa-location-dot"></i> Allahabad, Rajanpur</a>
+      </div>
+
+      <div class="footer-pro-box">
+        <h3>Follow Us</h3>
+        <div class="footer-pro-social">
+          <a href="https://facebook.com/yourpage" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com/yourpage" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com/yourchannel" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://twitter.com/yourpage" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <a class="footer-plan-btn" href="#bookingBox">Plan Your Trip</a>
+      </div>
+    </div>
+
+    <div class="footer-pro-bottom"><p>&copy; 2026 Pak Travel Spark. All rights reserved.</p></div>
+  </footer>
+  <!-- ========================= -->
+<!-- FLOATING AI CHATBOT -->
+<!-- ========================= -->
+
+<div class="travel-chatbot-wrapper">
+
+  <!-- FLOATING ICON -->
+
+  <button class="chat-toggle-btn" id="chatToggleBtn">
+    💬
+  </button>
+
+  <!-- CHATBOT -->
+
+  <div class="travel-chatbot" id="travelChatbot">
+
+    <!-- HEADER -->
+
+    <div class="chat-header">
+
+      <div class="chat-header-left">
+        <h3>PAK Travel AI</h3>
+        <span>Smart Pakistan Travel Assistant</span>
+      </div>
+
+      <!-- CROSS BUTTON -->
+
+      <button class="close-chat-btn" id="closeChatBtn">
+        ✖
+      </button>
+
+    </div>
+
+    <!-- CHAT AREA -->
+
+    <div class="chat-body" id="chatBody">
+
+      <div class="bot-msg">
+
+        Assalamualaikum 👋 <br><br>
+
+        Main Pakistan AI Travel Assistant hun. <br><br>
+
+        Aap pooch sakte hain:
+        <br><br>
+
+        ✔ Routes <br>
+        ✔ Distance <br>
+        ✔ Safety <br>
+        ✔ Hotels <br>
+        ✔ Budget <br>
+        ✔ Travel Agencies <br>
+        ✔ Weather <br>
+        ✔ Maps <br>
+        ✔ Tour Packages
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="chat-footer">
+
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="Ask about Pakistan tours..."
+      >
+
+      <button id="sendBtn">➤</button>
+
+      <button id="voiceBtn">🎤</button>
+
+    </div>
+
+  </div>
+
+</div>
+  
+<script src="swat.js"></script>
+</body>
+</html>

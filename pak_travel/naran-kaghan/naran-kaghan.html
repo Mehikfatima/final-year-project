@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naran Kaghan Tour | Pak Travel Spark</title>
+  <link rel="stylesheet" href="naran-kaghan.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header class="tour-detail-nav">
+  <a href="../index-updated.html" class="tour-logo">PAK <span>TRAVEL</span> SPARK</a>
+  <a href="../index-updated.html">Back to Home</a>
+</header>
+<section class="tour-split-hero">
+  <div class="hero-image hero-slider">
+  <div class="slides">
+    <img class="slide active" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80">
+    <img class="slide" src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80">
+    <img class="slide" src="https://images.unsplash.com/photo-1589553416260-f586c8f1514f?auto=format&fit=crop&w=1200&q=80" alt="Mountains">
+    <img class="slide" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Nature">
+    <img class="slide" src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80" >
+    <img class="slide" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80" alt="Nature">
+    <img class="slide" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80" alt="Nature">
+    <img class="slide" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80" alt="Nature">
+    <img class="slide" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80" alt="Nature">
+    <img class="slide" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=800" alt="Nature">
+  </div>
+  <button class="slider-btn prev" onclick="changeHeroSlide(-1)">❮</button>
+  <button class="slider-btn next" onclick="changeHeroSlide(1)">❯</button>
+  <div class="hero-overlay">
+    <span>5 Days / 4 Nights</span>
+    <h1>Naran Kaghan Valley Tour</h1>
+    <p>Explore Saif-ul-Malook Lake, Kunhar River, Shogran, Siri Paye, Lalazar and Babusar Top.</p>
+  </div>
+</div>
+<div class="tour-map-card">
+      <div class="map-card-header">
+        <div>
+          <h2>Route to Naran</h2>
+          <p>Select your starting city to view route and estimated package price.</p>
+        </div>
+        <i class="fa-solid fa-route"></i>
+      </div>
+
+      <div class="start-location-box">
+        <label for="startLocation">Tour Start Location</label>
+        <select id="startLocation">
+          <option value="Lahore" data-price="28000">Lahore - Rs. 28,000 per person</option>
+          <option value="Islamabad" data-price="22000">Islamabad - Rs. 22,000 per person</option>
+          <option value="Rawalpindi" data-price="22000">Rawalpindi - Rs. 22,000 per person</option>
+          <option value="Multan" data-price="34000">Multan - Rs. 34,000 per person</option>
+          <option value="Rajanpur" data-price="39000">Rajanpur - Rs. 39,000 per person</option>
+          <option value="Karachi" data-price="48000">Karachi - Rs. 48,000 per person</option>
+          <option value="Khanewal" data-price="35000">Khanewal - Rs. 35,000 per person</option>
+          <option value="Chakwal" data-price="24000">Chakwal - Rs. 24,000 per person</option>
+          <option value="Attock" data-price="23000">Attock - Rs. 23,000 per person</option>
+          <option value="Bahawalpur" data-price="37000">Bahawalpur - Rs. 37,000 per person</option>
+          <option value="Gujranwala" data-price="30000">Gujranwala - Rs. 30,000 per person</option>
+          <option value="custom" data-price="0">Other City / Custom Location</option>
+        </select>
+        <input type="text" id="customLocation" placeholder="Enter your city, e.g. Bahawalpur" class="hide">
+        <div class="price-note">
+          <strong id="priceText">Rs. 45,000 per person</strong>
+          <span>Charges starting destination ke according change hon gy.</span>
+        </div>
+      </div>
+      <div class="hero-map">
+        <iframe id="routeMap" src="https://www.google.com/maps?q=Naran%20Kaghan%20Pakistan&output=embed" loading="lazy"></iframe>
+        <div class="route-box"><strong>Route Preview</strong><p id="routeText">Select your starting city in the form to show route to Naran Kaghan.</p></div>
+      </div>
+</div>
+</section>
+
+<section class="tour-detail-main single-column">
+  <div class="tour-detail-content">
+    <div class="tour-info-grid">
+      <div><i class="fa-solid fa-clock"></i><strong>Duration</strong><span>5 Days</span></div>
+      <div><i class="fa-solid fa-users"></i><strong>Group Size</strong><span>2-20 Persons</span></div>
+      <div><i class="fa-solid fa-hotel"></i><strong>Hotel</strong><span>Included</span></div>
+      <div><i class="fa-solid fa-car"></i><strong>Transport</strong><span>Included</span></div>
+    </div>
+
+    <section class="tour-panel booking-start-panel" id="bookingBox">
+      <h2>Do you want to book this Naran Kaghan tour?</h2>
+      <p>Click below. First login/register, then fill traveler details. Your start location, total payment, payment method and screenshot will be saved in booking record.</p>
+      <button id="startBookingBtn" class="primary-btn">Book Now</button>
+    </section>
+    <section class="tour-panel booking-flow hidden" id="authPanel">
+      <button class="close-auth-btn" id="closeAuthPanel">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h2>Login / Register</h2>
+      <p class="small-note">
+        Already registered user login karega.
+        New user register kar sakta hai.
+      </p>
+      <div class="auth-tabs">
+        <button class="active" data-auth="login">
+          Login
+        </button>
+        <button data-auth="register">
+          Register
+        </button>
+      </div>
+      <form id="authForm">
+
+        <input type="text"
+        id="authName"
+        placeholder="Full Name"
+        class="register-only hidden">
+        <input type="tel"
+        id="authPhone"
+        placeholder="Phone Number"
+        required>
+        <input type="password"
+        id="authPassword"
+        placeholder="Password"
+        required>
+        <button type="submit"
+        class="primary-btn"
+        id="authSubmitBtn">
+        Login
+      </button>
+    </form>
+  </section>
+
+    <section class="tour-panel booking-flow hidden" id="previousRecordPanel">
+      <h2>Your Previous Booking</h2>
+      <div id="previousBookingBox"></div>
+      <button id="newBookingBtn" class="secondary-btn">Make New Booking</button>
+    </section>
+
+    <section class="tour-panel booking-flow hidden" id="bookingFormPanel">
+      <h2>Traveler & Payment Details</h2>
+      <div class="seat-box"><span>Seats Left</span><strong id="seatsLeft">14</strong></div>
+      <form id="tourBookingForm">
+        <input type="hidden" id="tourName" value="Naran Kaghan Valley Tour">
+        <div class="form-grid">
+          <input type="text" id="customerName" placeholder="Customer Name" required>
+          <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+          <input type="text" id="customerCnic" placeholder="CNIC / ID Card Number" required>
+          <input type="date" id="travelDate" required>
+          <input type="number" id="guestCount" placeholder="Total Travelers" min="1" required>
+          <input type="number" id="roomCount" placeholder="Total Hotel Rooms" min="1" value="1" required>
+          <input type="text" id="startCity" placeholder="From Location e.g. Lahore, Rajanpur, Islamabad" required>
+          <select id="hotelChoice" required>
+            <option value="">Select Hotel Package</option>
+            <option value="standard">ICONIC Hotel & Restaurant Naran - Standard</option>
+            <option value="premium">The Sarai Hotel & Resort - Premium</option>
+            <option value="family">Croft Family Cottages - Family Cottage</option>
+          </select>
+        </div>
+        <div class="price-preview">
+          <p><strong>Destination:</strong> Naran Kaghan</p>
+          <p><strong>Route:</strong> <span id="calculatedRoute">Please enter start city</span></p>
+          <p><strong>Selected Hotel:</strong> <span id="selectedHotelText">Please select hotel</span></p>
+          <p><strong>Transport + Tour Price:</strong> <span id="basePriceText">Rs. 0</span></p>
+          <p><strong>Child Policy:</strong> 0–4 years free, 5–8 years 50% charges, 9+ years full charges</p>
+          <p><strong>Hotel Rooms:</strong> <span id="roomCountText">1 room</span></p>
+          <p><strong>Hotel Charges:</strong> <span id="hotelPriceText">Rs. 0</span></p>
+          <p><strong>Total Payment:</strong> <span id="calculatedPrice">Rs. 0</span></p>
+        </div>
+        <div class="traveler-dynamic-area">
+          <h3>Travelers Information</h3>
+          <p class="small-note">Total travelers ke according fields automatically add hon gi. Child select karne par CNIC required nahi hoga, lekin name, age aur gender required rahen ge.</p>
+          <div id="travelerFields"></div>
+        </div>
+        <textarea id="bookingNote" placeholder="Special request / pickup detail"></textarea>
+
+        <h3 class="payment-title">Payment Option</h3>
+        <div class="payment-options">
+          <label><input type="radio" name="paymentType" value="No Advance" checked> No advance now</label>
+          <label><input type="radio" name="paymentType" value="Advance Payment"> Advance payment</label>
+          <label><input type="radio" name="paymentType" value="Full Payment"> Full payment</label>
+        </div>
+        <div class="account-box hidden" id="accountBox">
+          <h4>Admin Account Details</h4>
+          <p><strong>JazzCash/EasyPaisa:</strong> 0316-6564980</p>
+          <p><strong>Account Title:</strong> Pak Travel Spark</p>
+          <p><strong>Bank:</strong> HBL / Account No: 1234-567890-01</p>
+          <input type="file" id="paymentScreenshot" accept="image/*">
+          <small>Advance/full payment karne ke baad screenshot upload kar dein.</small>
+        </div>
+        <button type="submit" class="primary-btn">Submit Booking</button>
+      </form>
+      <div class="confirmation hidden" id="confirmationMsg"></div>
+    </section>
+
+    <section class="tour-panel">
+      <h2>Tour Overview</h2>
+      <p>Naran Kaghan is one of Pakistan’s most attractive mountain destinations. This package is perfect for families, couples and groups who want lakes, rivers, cool weather, scenic drives and comfortable hotel stays.</p>
+    </section>
+
+    <section class="tour-panel">
+      <h2>Day-by-Day Itinerary</h2>
+      <div class="itinerary-item"><span>Day 1</span><div><h3>Departure to Naran</h3><p>Start from your selected city. Travel through Balakot and Kaghan Valley with Kunhar River views.</p></div></div>
+      <div class="itinerary-item"><span>Day 2</span><div><h3>Saif-ul-Malook Lake</h3><p>Visit the famous lake by jeep, enjoy photography, boating options and local food points.</p></div></div>
+      <div class="itinerary-item"><span>Day 3</span><div><h3>Shogran & Siri Paye</h3><p>Explore green meadows, mountain viewpoints and optional jeep adventure.</p></div></div>
+      <div class="itinerary-item"><span>Day 4</span><div><h3>Lalazar / Babusar Top</h3><p>Visit Lalazar meadows or Babusar Top depending on road and weather conditions.</p></div></div>
+      <div class="itinerary-item"><span>Day 5</span><div><h3>Return Journey</h3><p>Drive back with photo stops and memories of Naran Kaghan.</p></div></div>
+    </section>
+
+    <section class="tour-panel hotel-section">
+      <h2>Famous Hotels & Restaurants in Naran Kaghan</h2>
+      <p class="small-note">Ye suggestions user attraction ke liye hain. Final hotel availability admin confirm karega.</p>
+      <div class="hotel-grid">
+        <article class="hotel-card clickable-hotel" data-hotel="ICONIC Hotel & Restaurant Naran Pakistan">
+          <img src="https://theiconichotels.com/wp-content/uploads/2024/01/ICONIC-Hotel-Naran.webp" onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80'" alt="Iconic Hotel Naran">
+          <h3>ICONIC Hotel & Restaurant Naran</h3><p>Family-friendly stay, on-site restaurant, parking and access to popular places like Saif-ul-Malook, Lalazar and Babusar Top.</p></article>
+        <article class="hotel-card clickable-hotel" data-hotel="The Sarai Hotel & Resort Naran Pakistan">
+          <img src="https://thesaraihotel.com/wp-content/uploads/2021/12/sarai-hotel-naran.jpg" onerror="this.src='https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=700&q=80'" alt="Sarai Hotel Naran">
+          <h3>The Sarai Hotel & Resort</h3><p>A four-star hotel in the center of Naran Valley with scenic rooms and modern amenities.</p></article>
+        <article class="hotel-card clickable-hotel" data-hotel="Croft Family Cottages Naran Pakistan">
+          <img src="https://thecroftcottages.com/wp-content/uploads/2024/03/croft-family-cottages-naran.webp" onerror="this.src='https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=700&q=80'" alt="Croft Family Cottages">
+          <h3>Croft Family Cottages</h3><p>Good for families who prefer cottage-style stay, outdoor spaces, parking and on-site restaurant.</p></article>
+      </div>
+    </section>
+
+    <section class="tour-panel places-section">
+      <h2>Famous Places in Naran Kaghan</h2>
+      <p class="small-note">Image/card par click karen, map usi place ki location par update ho jayega.</p>
+      <div class="hotel-grid">
+        <article class="hotel-card place-card" data-place="Saif ul Malook Lake Naran Pakistan">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=700&q=80" alt="Saif ul Malook Lake">
+          <h3>Saif-ul-Malook Lake</h3>
+          <p>Famous alpine lake near Naran with jeep access, boating options and mountain views.</p>
+        </article>
+        <article class="hotel-card place-card" data-place="Babusar Top Naran Pakistan">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80" alt="Babusar Top">
+          <h3>Babusar Top</h3>
+          <p>High mountain pass and viewpoint, usually open in summer depending on weather and road condition.</p>
+        </article>
+        <article class="hotel-card place-card" data-place="Lalazar Naran Pakistan">
+          <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=700&q=80" alt="Lalazar Naran">
+          <h3>Lalazar Meadows</h3>
+          <p>Green meadows, mountain scenery and photography point near Naran Valley.</p>
+        </article>
+        <article class="hotel-card place-card" data-place="Siri Paye Meadows Shogran Pakistan">
+          <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=700&q=80" alt="Siri Paye Meadows">
+          <h3>Siri Paye Meadows</h3>
+          <p>Beautiful meadow trip from Shogran with jeep adventure and panoramic valley views.</p>
+        </article>
+        <article class="hotel-card place-card" data-place="Kunhar River Naran Pakistan">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=700&q=80" alt="Kunhar River">
+          <h3>Kunhar River</h3>
+          <p>Popular riverside sightseeing, trout fish points and scenic stops along the route.</p>
+        </article>
+        <article class="hotel-card place-card" data-place="Jalkhad Naran Pakistan">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=700&q=80" alt="Jalkhad Naran">
+          <h3>Jalkhad</h3>
+          <p>Quiet mountain area on the way to Babusar with cool weather and scenic drive experience.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="tour-panel include-grid"><div><h2>Included</h2><p><i class="fa-solid fa-check"></i> Hotel accommodation</p><p><i class="fa-solid fa-check"></i> Private/group transport</p><p><i class="fa-solid fa-check"></i> Driver support</p><p><i class="fa-solid fa-check"></i> Fuel and tolls</p></div><div><h2>Not Included</h2><p><i class="fa-solid fa-xmark"></i> Personal shopping</p><p><i class="fa-solid fa-xmark"></i> Extra meals</p><p><i class="fa-solid fa-xmark"></i> Jeep / entry tickets where not mentioned</p><p><i class="fa-solid fa-xmark"></i> Emergency expense</p></div></section>
+  </div>
+</section>
+ <section id="destinations">
+    <h2 class="section-title">Popular Destinations</h2>
+    <div class="grid">
+      <div class="card destination-card">
+        <a href="../murree/muree.html">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop"alt="Murree"></a>
+          <h3>Murree</h3>
+          <p>Best Season: April to October</p>
+          <p>Route Difficulty: Easy</p>
+        </div>
+        <div class="card destination-card">
+          <a href="../fairy_meadows/fairy-meadows.html">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop" alt="Fairy Meadows"></a>
+            <h3>Fairy Meadows</h3>
+            <p>Best Season: June to September</p>
+            <p>Route Difficulty: Moderate to Hard</p>
+          </div>
+          <div class="card destination-card">
+            <a href="../multan/multan.html">
+              <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?q=80&w=1200&auto=format&fit=crop" alt="Multan">
+            </a>
+            <h3>Multan</h3>
+            <p>Best Season: October to March</p>
+            <p>Route Difficulty: Easy</p>
+          </div>
+          <div class="card destination-card">
+            <a href="../chitral/chitral.html">
+              <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?q=80&w=1200&auto=format&fit=crop" alt="Chitral">
+            </a>
+            <h3>Chitral</h3>
+            <p>Best Season: May to September</p>
+            <p>Route Difficulty: Medium</p>
+          </div>
+        </div>
+      </section>
+<section class="tour-faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item"><button>Can I book without advance payment? <i class="fa-solid fa-plus"></i></button><p>Yes. User can select “No advance now” and submit the form. Admin can confirm payment later.</p></div>
+  <div class="faq-item"><button>Will price change by starting city? <i class="fa-solid fa-plus"></i></button><p>Yes. Price is automatically calculated according to starting city and guest count.</p></div>
+  <div class="faq-item"><button>Is hotel fixed? <i class="fa-solid fa-plus"></i></button><p>User selected hotel form ke record me save hoga. Final room availability admin confirm karega.</p></div>
+</section>
+<!-- FOOTER -->
+  <footer class="footer-pro">
+     <div class="footer-pro-container">
+      <div class="footer-pro-box footer-brand">
+        <h3>Pak Travel Spark</h3>
+        <img src="logo.png" alt="Pak Travel Spark Logo">
+        <p>Your trusted travel partner for Pakistan adventures, group tours, and custom trips.</p>
+      </div>
+
+ <div class="footer-pro-box">
+  <h3>Quick Links</h3>
+  <a href="../index-updated.html#destinations">Pakistan Tours</a>
+  <a href="../index-updated.html#group-tours">Group Tours</a>
+  <a href="../index-updated.html#reviews">Reviews</a>
+  <a href="../contact/contact.html">Contact Us</a>
+  <a href="../images/image.html">Gallery</a>
+  <a href="../blog/blog.html">Travel Blog</a>
+</div>
+
+      <div class="footer-pro-box">
+        <h3>Contact Info</h3>
+        <a href="tel:+923166564980"><i class="fa-solid fa-phone"></i> +92 316 656 4980</a>
+        <a href="mehikfatima3@gmail.com"><i class="fa-solid fa-envelope"></i> mehikfatima3@gmail.com</a>
+        <a href="https://www.google.com/maps?q=Allahabad%20Rajanpur%20Pakistan" target="_blank"><i class="fa-solid fa-location-dot"></i> Allahabad, Rajanpur</a>
+      </div>
+
+      <div class="footer-pro-box">
+        <h3>Follow Us</h3>
+        <div class="footer-pro-social">
+          <a href="https://facebook.com/yourpage" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com/yourpage" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com/yourchannel" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://twitter.com/yourpage" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <a class="footer-plan-btn" href="#bookingBox">Plan Your Trip</a>
+      </div>
+    </div> 
+    <div class="footer-pro-bottom"><p>&copy; 2026 Pak Travel Spark. All rights reserved.</p></div>
+    </footer> -->
+  <!-- ========================= -->
+<!-- FLOATING AI CHATBOT -->
+<!-- ========================= -->
+
+<div class="travel-chatbot-wrapper">
+
+  <!-- FLOATING ICON -->
+
+  <button class="chat-toggle-btn" id="chatToggleBtn">
+    💬
+  </button>
+
+  <!-- CHATBOT -->
+
+  <div class="travel-chatbot" id="travelChatbot">
+
+    <!-- HEADER -->
+
+    <div class="chat-header">
+
+      <div class="chat-header-left">
+        <h3>PAK Travel AI</h3>
+        <span>Smart Pakistan Travel Assistant</span>
+      </div>
+
+      <!-- CROSS BUTTON -->
+
+      <button class="close-chat-btn" id="closeChatBtn">
+        ✖
+      </button>
+
+    </div>
+
+    <!-- CHAT AREA -->
+
+    <div class="chat-body" id="chatBody">
+
+      <div class="bot-msg">
+
+        Assalamualaikum 👋 <br><br>
+
+        Main Pakistan AI Travel Assistant hun. <br><br>
+
+        Aap pooch sakte hain:
+        <br><br>
+
+        ✔ Routes <br>
+        ✔ Distance <br>
+        ✔ Safety <br>
+        ✔ Hotels <br>
+        ✔ Budget <br>
+        ✔ Travel Agencies <br>
+        ✔ Weather <br>
+        ✔ Maps <br>
+        ✔ Tour Packages
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="chat-footer">
+
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="Ask about Pakistan tours..."
+      >
+
+      <button id="sendBtn">➤</button>
+
+      <button id="voiceBtn">🎤</button>
+
+    </div>
+
+  </div>
+
+</div>
+  
+<script src="naran-kaghan.js"></script>
+</body>
+</html>

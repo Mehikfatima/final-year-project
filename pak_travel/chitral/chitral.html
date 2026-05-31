@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chitral Tour | Pak Travel Spark</title>
+  <link rel="stylesheet" href="chitral.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header class="tour-detail-nav">
+  <a href="../index-updated.html" class="tour-logo">PAK <span>TRAVEL</span> SPARK</a>
+  <a href="../index-updated.html">Back to Home</a>
+</header>
+<section class="tour-split-hero">
+  <div class="hero-image hero-slider">
+    <div class="slides"><img class="slide active" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop" alt="Chitral Valley Pakistan">
+        <img class="slide" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1400&auto=format&fit=crop" alt="Kalash Valley Chitral">
+        <img class="slide" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1400&auto=format&fit=crop" alt="Shandur Pass Chitral">
+    </div>
+    <button class="slider-btn prev" onclick="changeHeroSlide(-1)">❮</button>
+    <button class="slider-btn next" onclick="changeHeroSlide(1)">❯</button>
+    
+    <div class="hero-overlay">
+        <span>6 Days / 5 Nights</span>
+        <h1>Chitral Unique Culture Tour</h1>
+        <p>Explore Kalash Valley, Garam Chashma and Shandur Pass with culture, mountains, history and natural beauty.</p>
+    </div>
+  </div>
+
+  <div class="tour-map-card">
+    <div class="map-card-header">
+      <div>
+        <h2>Route to Chitral</h2>       
+        <p>Select your starting city to view route and estimated package price.</p>
+      </div>
+      <i class="fa-solid fa-route"></i>
+    </div>
+    <div class="start-location-box">
+      <label for="startLocation">Tour Start Location</label>
+      <select id="startLocation">
+        <option value="Islamabad" data-price="46000">Islamabad → Chitral (390 km) - Rs. 46,000 per person</option>
+        <option value="Rawalpindi" data-price="46000">Rawalpindi → Chitral (400 km) - Rs. 46,000 per person</option>
+        <option value="Lahore" data-price="56000">Lahore → Chitral (770 km) - Rs. 56,000 per person</option>
+        <option value="Peshawar" data-price="40000">Peshawar → Chitral (330 km) - Rs. 40,000 per person</option>
+        <option value="Faisalabad" data-price="58000">Faisalabad → Chitral (820 km) - Rs. 58,000 per person</option>
+        <option value="Multan" data-price="66000">Multan → Chitral (1040 km) - Rs. 66,000 per person</option>
+        <option value="Karachi" data-price="82000">Karachi → Chitral (1700 km) - Rs. 82,000 per person</option>
+        <option value="Sialkot" data-price="59000">Sialkot → Chitral (760 km) - Rs. 59,000 per person</option>
+        <option value="Gujranwala" data-price="58000">Gujranwala → Chitral (720 km) - Rs. 58,000 per person</option>
+        <option value="Abbottabad" data-price="43000">Abbottabad → Chitral (390 km) - Rs. 43,000 per person</option>
+        <option value="Swat" data-price="42000">Swat → Chitral (300 km) - Rs. 42,000 per person</option>
+        <option value="custom" data-price="0">Other City / Custom Location</option>
+      </select>
+      <input type="text" id="customLocation" placeholder="Enter your city, e.g. Sialkot" class="hide">
+
+      <div class="price-note">
+        <strong id="priceText">Rs. 18,000 per person</strong>
+        <span>Charges starting destination ke according change hon gy.</span>
+      </div>
+    </div>
+    <div class="hero-map">
+  <iframe id="routeMap" src="https://www.google.com/maps?q=Chitral%20Pakistan&output=embed"></iframe>
+
+  <div class="route-box">
+    <strong>Route Preview</strong>
+    <p id="routeText">Select your starting city to show route to Chitral.</p>
+  </div>
+</div>
+
+  </div>
+</section>
+<section class="tour-detail-main single-column">
+  <div class="tour-detail-content">
+    <div class="tour-info-grid">
+      <div><i class="fa-solid fa-clock"></i><strong>Duration</strong><span>6 Days</span></div>
+      <div><i class="fa-solid fa-users"></i><strong>Group Size</strong><span>2-20 Persons</span></div>
+      <div><i class="fa-solid fa-hotel"></i><strong>Hotel</strong><span>Included</span></div>
+      <div><i class="fa-solid fa-car"></i><strong>Transport</strong><span>Included</span></div>
+    </div>
+
+    <section class="tour-panel booking-start-panel" id="bookingBox">
+      <h2>Do you want to book this Chitral tour?</h2>
+      <p>Click below. First login/register, then fill traveler details. Your start location, total payment, payment method and screenshot will be saved in booking record.</p>
+      <button id="startBookingBtn" class="primary-btn">Book Now</button>
+    </section>
+    <section class="tour-panel booking-flow hidden" id="authPanel">
+      <button class="close-auth-btn" id="closeAuthPanel">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h2>Login / Register</h2>
+      <p class="small-note">
+        Already registered user login karega.
+        New user register kar sakta hai.
+      </p>
+      <div class="auth-tabs">
+        <button class="active" data-auth="login">
+          Login
+        </button>
+        <button data-auth="register">
+          Register
+        </button>
+      </div>
+      <form id="authForm">
+        <input type="text"
+        id="authName"
+        placeholder="Full Name"
+        class="register-only hidden">
+        <input type="tel"
+        id="authPhone"
+        placeholder="Phone Number"
+        required>
+        <input type="password"
+        id="authPassword"
+        placeholder="Password"
+        required>
+        <button type="submit"
+        class="primary-btn"
+        id="authSubmitBtn">
+        Login
+      </button>
+    </form>
+  </section>
+
+    <section class="tour-panel booking-flow hidden" id="previousRecordPanel">
+      <h2>Your Previous Booking</h2>
+      <div id="previousBookingBox"></div>
+      <button id="newBookingBtn" class="secondary-btn">Make New Booking</button>
+    </section>
+
+    <section class="tour-panel booking-flow hidden" id="bookingFormPanel">
+      <h2>Traveler & Payment Details</h2>
+      <div class="seat-box"><span>Seats Left</span><strong id="seatsLeft">14</strong></div>
+      <form id="tourBookingForm">
+       <input type="hidden" id="tourName" value="Chitral Unique Culture Tour">
+        <div class="form-grid">
+          <input type="text" id="customerName" placeholder="Customer Name" required>
+          <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+          <input type="text" id="customerCnic" placeholder="CNIC / ID Card Number" required>
+          <input type="date" id="travelDate" required>
+          <input type="number" id="guestCount" placeholder="Total Travelers" min="1" required>
+          <input type="number" id="roomCount" placeholder="Total Hotel Rooms" min="1" value="1" required>
+          <input type="text" id="startCity" placeholder="From Location e.g. Lahore, Rajanpur, Islamabad" required>
+          <select id="hotelChoice" required>
+            <option value="">Select Chitral Hotel / Stay Package</option>
+            <option value="hindukush">Hindukush Heights Chitral - Luxury</option>
+            <option value="tirichmir">Tirich Mir View Hotel - Premium</option>
+            <option value="kalashGuest">Kalash Valley Guest House - Cultural Stay</option>
+            <option value="garamResort">Garam Chashma Resort Stay - Standard</option>
+            <option value="budgetHotel">Budget Chitral Hotel - Economy</option>
+        </select>
+        <select id="vehicleChoice" required>
+  <option value="">Select Travel Vehicle</option>
+  <option value="Coaster / Hiace">Coaster / Hiace - Group Tour</option>
+  <option value="Private Car">Private Car - 2 to 4 Persons</option>
+  <option value="Private Jeep">Private Jeep - Mountain Route</option>
+  <option value="Luxury Van">Luxury Van - Family Package</option>
+</select>
+
+<select id="pickupPoint" required>
+  <option value="">Select Pickup Point</option>
+  <option value="Main Bus Terminal">Main Bus Terminal</option>
+  <option value="Railway Station">Railway Station</option>
+  <option value="Airport">Airport</option>
+  <option value="Your Address">Pickup from your address</option>
+</select>
+
+<input type="text"
+id="pickupAddress"
+placeholder="Enter exact pickup address / landmark">
+        </div>
+        <div class="price-preview">
+          <p><strong>Destination:</strong> chitral</p>
+          <p><strong>Route:</strong> <span id="calculatedRoute">Please enter start city</span></p>
+          <p><strong>Selected Hotel:</strong> <span id="selectedHotelText">Please select hotel</span></p>
+          <p><strong>Transport + Tour Price:</strong> <span id="basePriceText">Rs. 0</span></p>
+          <p><strong>Child Policy:</strong> 0–4 years free, 5–8 years 50% charges, 9+ years full charges</p>
+          <p><strong>Hotel Rooms:</strong> <span id="roomCountText">1 room</span></p>
+          <p><strong>Hotel Charges:</strong> <span id="hotelPriceText">Rs. 0</span></p>
+          <p><strong>Total Payment:</strong> <span id="calculatedPrice">Rs. 0</span></p>
+          <p><strong>Travel Vehicle:</strong> <span id="selectedVehicleText">Please select vehicle</span></p>
+          <p><strong>Pickup Point:</strong> <span id="selectedPickupText">Please select pickup point</span></p>
+          <p><strong>Next Process:</strong> we will confirm vehicle, driver contact and pickup time after booking.</p>
+        
+        </div>
+        <div class="traveler-dynamic-area">
+          <h3>Travelers Information</h3>
+          <p class="small-note">Total travelers ke according fields automatically add hon gi. Child select karne par CNIC required nahi hoga, lekin name, age aur gender required rahen ge.</p>
+          <div id="travelerFields"></div>
+        </div>
+        <textarea id="bookingNote" placeholder="Special request / pickup detail"></textarea>
+
+        <h3 class="payment-title">Payment Option</h3>
+        <div class="payment-options">
+          <label><input type="radio" name="paymentType" value="No Advance" checked> No advance now</label>
+          <label><input type="radio" name="paymentType" value="Advance Payment"> Advance payment</label>
+          <label><input type="radio" name="paymentType" value="Full Payment"> Full payment</label>
+        </div>
+        <div class="account-box hidden" id="accountBox">
+          <h4>Admin Account Details</h4>
+          <p><strong>JazzCash/EasyPaisa:</strong> 0316-6564980</p>
+          <p><strong>Account Title:</strong> Pak Travel Spark</p>
+          <p><strong>Bank:</strong> HBL / Account No: 1234-567890-01</p>
+          <input type="file" id="paymentScreenshot" accept="image/*">
+          <small>Advance/full payment karne ke baad screenshot upload kar dein.</small>
+        </div>
+        <button type="submit" class="primary-btn">Submit Booking</button>
+      </form>
+      <div class="confirmation hidden" id="confirmationMsg"></div>
+    </section>
+    <section class="tour-panel">
+        <h2>Tour Overview</h2>
+        <p>Chitral is one of Pakistan’s most unique cultural and mountain destinations, famous for Kalash Valley, Garam Chashma, Chitral Fort and Shandur Pass. This tour is best for families, culture lovers, photographers and adventure travelers.</p>
+    </section>
+    <section class="tour-panel hotel-section">
+        <h2>5 Chitral Hotel & Stay Packages</h2>
+        <p class="small-note">Hotel card par click karen, map us hotel/stay location ko show karega.</p>
+        <div class="hotel-grid">
+            <article class="hotel-card clickable-hotel" data-hotel="Hindukush Heights Chitral Pakistan">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop" alt="Hindukush Heights Chitral">
+                <h3>Hindukush Heights Chitral</h3>
+                <p>Luxury mountain-view stay for families and couples.</p>
+                <span>Room Charges: +Rs. 14,000 per room</span>
+            </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Tirich Mir View Hotel Chitral Pakistan">
+      <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop" alt="Tirich Mir View Hotel">
+      <h3>Tirich Mir View Hotel</h3>
+      <p>Premium stay with scenic views and comfortable rooms.</p>
+      <span>Room Charges: +Rs. 10,000 per room</span>
+    </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Kalash Valley Guest House Bumburet Chitral Pakistan">
+      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop" alt="Kalash Valley Guest House">
+      <h3>Kalash Valley Guest House</h3>
+      <p>Cultural guest-house stay near Kalash Valley.</p>
+      <span>Room Charges: +Rs. 8,000 per room</span>
+    </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Garam Chashma Chitral Pakistan hotel">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Garam Chashma Resort Stay">
+      <h3>Garam Chashma Resort Stay</h3>
+      <p>Peaceful stay near hot springs and mountain views.</p>
+      <span>Room Charges: +Rs. 7,000 per room</span>
+    </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Chitral city hotel Pakistan">
+      <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1200&auto=format&fit=crop" alt="Budget Chitral Hotel">
+      <h3>Budget Chitral Hotel</h3>
+      <p>Economy hotel option for students and low-budget travelers.</p>
+      <span>Room Charges: +Rs. 5,000 per room</span>
+    </article>
+  </div>
+</section>
+<section class="tour-panel package-places">
+  <h2>Places Included in Chitral Tour</h2>
+  <p class="small-note">Kisi bhi place par click karen, map us place ki real location show karega.</p>
+
+  <div class="places-grid">
+    <div class="place-card" data-place="Kalash Valley Chitral Pakistan">
+      <i class="fa-solid fa-people-group"></i>
+      <strong>Kalash Valley</strong>
+      <span>Unique culture, traditions and colorful lifestyle</span>
+    </div>
+
+    <div class="place-card" data-place="Garam Chashma Chitral Pakistan">
+      <i class="fa-solid fa-hot-tub-person"></i>
+      <strong>Garam Chashma</strong>
+      <span>Natural hot spring and mountain scenery</span>
+    </div>
+
+    <div class="place-card" data-place="Shandur Pass Chitral Pakistan">
+      <i class="fa-solid fa-mountain"></i>
+      <strong>Shandur Pass</strong>
+      <span>High-altitude pass and polo ground</span>
+    </div>
+
+    <div class="place-card" data-place="Chitral Fort Pakistan">
+      <i class="fa-solid fa-landmark"></i>
+      <strong>Chitral Fort</strong>
+      <span>Historic fort and cultural heritage</span>
+    </div>
+
+    <div class="place-card" data-place="Chitral Museum Pakistan">
+      <i class="fa-solid fa-building-columns"></i>
+      <strong>Chitral Museum</strong>
+      <span>Local history and cultural artifacts</span>
+    </div>
+
+    <div class="place-card" data-place="Chitral Pakistan">
+      <i class="fa-solid fa-heart"></i>
+      <strong>Best For</strong>
+      <span>Culture lovers, families and adventure travelers</span>
+    </div>
+  </div>
+</section>
+<section class="tour-panel">
+  <h2>Suggested Day Plan</h2>
+
+  <div class="itinerary-item">
+    <span>Day 1</span>
+    <div>
+      <h3>Departure to Chitral</h3>
+      <p>Pickup from selected city and travel through scenic mountain routes towards Chitral for overnight hotel stay.</p>
+    </div>
+  </div>
+
+  <div class="itinerary-item">
+    <span>Day 2</span>
+    <div>
+      <h3>Chitral City + Chitral Fort Visit</h3>
+      <p>Explore Chitral city, Chitral Fort, local bazaar and cultural heritage sites with photography stops.</p>
+    </div>
+  </div>
+
+  <div class="itinerary-item">
+    <span>Day 3</span>
+    <div>
+      <h3>Kalash Valley Cultural Tour</h3>
+      <p>Visit Kalash Valley, experience unique Kalash culture, traditional houses, colorful dress and local lifestyle.</p>
+    </div>
+  </div>
+
+  <div class="itinerary-item">
+    <span>Day 4</span>
+    <div>
+      <h3>Garam Chashma Visit</h3>
+      <p>Visit Garam Chashma hot spring area, enjoy mountain views, nature photography and peaceful valley scenery.</p>
+    </div>
+  </div>
+
+  <div class="itinerary-item">
+    <span>Day 5</span>
+    <div>
+      <h3>Shandur Pass Tour</h3>
+      <p>Visit Shandur Pass, famous for its high-altitude polo ground, wide landscapes and adventure views.</p>
+    </div>
+  </div>
+
+  <div class="itinerary-item">
+    <span>Day 6</span>
+    <div>
+      <h3>Return Journey</h3>
+      <p>Breakfast at hotel and return travel towards your selected city with short refreshment stops on the route.</p>
+    </div>
+  </div>
+</section>
+<section class="tour-panel include-grid"><div><h2>Included</h2><p><i class="fa-solid fa-check"></i> Hotel accommodation</p><p><i class="fa-solid fa-check"></i> Private/group transport</p><p><i class="fa-solid fa-check"></i> Driver support</p><p><i class="fa-solid fa-check"></i> Fuel and tolls</p></div><div><h2>Not Included</h2><p><i class="fa-solid fa-xmark"></i> Personal shopping</p><p><i class="fa-solid fa-xmark"></i> Extra meals</p><p><i class="fa-solid fa-xmark"></i> Jeep / entry tickets where not mentioned</p><p><i class="fa-solid fa-xmark"></i> Emergency expense</p></div></section>
+  </div>
+</section>
+ <section id="destinations">
+    <h2 class="section-title">Popular Destinations</h2>
+    <div class="grid">
+        <div class="card destination-card">
+            <a href="../multan/multan.html"><img src="https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=800&q=80" alt="Murree"></a>
+            <h3>Murree</h3>
+            <p>Best Season: December to February</p>
+            <p>Route Difficulty: Easy</p>
+        </div>
+     <div class="card destination-card">
+       <a href="../lahore/lahore-updated.html"><img src="https://media.istockphoto.com/id/2227643268/photo/lahore-fort-also-known-as-shahi-qila-is-a-unesco-world-heritage-site-located-in-the-heart-of.webp?a=1&b=1&s=612x612&w=0&k=20&c=YzM8mhWIHpPx0rE0FZ3Few2x4lNFRQgl-teBDul5QGg=" alt="Lahore"></a>
+       <h3>Lahore</h3>
+       <p>Best Season: October to March</p>
+       <p>Route Difficulty: Easy</p>
+      </div>
+
+      <div class="card destination-card">
+        <a href="../fairy_meadows/fairy-meadows.html"><img src="https://media.istockphoto.com/id/1490968445/photo/lower-kachura-lake-and-majestic-mountains-unite-in-natures-serenade-enveloped-by-lush-greenery.jpg?s=612x612&w=0&k=20&c=PpXtwFSkDktvT-W5s4Q1Gz8yGC-7ZFAgzWi5eeQBZ6c=" alt="fairy meadows"></a>
+        <h3>fairy meadows</h3>
+        <p>Best Season: May to September</p>
+        <p>Route Difficulty: Hard</p>
+      </div>
+
+      <div class="card destination-card">
+        <a href="../swat/swat.html"><img src="https://media.istockphoto.com/id/1490955053/photo/trees-in-the-forest-in-the-winter.jpg?s=612x612&w=0&k=20&c=JCEkcvpYhD6n20EC_vfhWQ-6g38PiaxW-sLcIaL5mQk=" alt="Swat"></a>
+        <h3>Swat</h3>
+        <p>Best Season: March to October</p>
+        <p>Route Difficulty: Easy</p>
+      </div>
+
+      <div class="card destination-card">
+        <a href="../hunza/hunza.html"><img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?q=80&w=1200&auto=format&fit=crop"
+        alt="Hunza Valley"></a>
+        <h3>Hunza Valley</h3>
+        <p>Best Season: April to October</p>
+        <p>Route Difficulty: Medium</p>
+      </div>
+    </div>
+  </section>
+<section class="tour-faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <button>
+      Can I book Chitral tour without advance payment?
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <p>
+      Yes. User “No advance now” option select kar ke booking submit kar sakta hai. Remaining payment admin later confirm karega.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <button>
+      Will Chitral package price change by starting city?
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <p>
+      Yes. Tour price automatically selected city, distance and total travelers ke according calculate hota hai.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <button>
+      Are Kalash Valley, Garam Chashma and Shandur Pass included in package?
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <p>
+      Yes. Main Chitral package me Kalash Valley, Garam Chashma and Shandur Pass sightseeing included hai. Final visit weather aur road conditions ke according confirm hota hai.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <button>
+      Is Chitral safe for families and couples?
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <p>
+      Yes. Chitral is considered one of the safest and most peaceful tourist destinations in northern Pakistan.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <button>
+      Is hotel/stay package fixed?
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <p>
+      User selected hotel or resort package booking record me save hoga. Final room availability admin confirm karega.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <button>
+      What is the best season to visit Chitral?
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <p>
+      Summer season (May to September) is best for visiting Chitral, Kalash Valley and Shandur Pass because roads and weather are more suitable for tourism.
+    </p>
+  </div>
+
+</section>
+<!-- FOOTER -->
+  <footer class="footer-pro">
+    <div class="footer-pro-container">
+      <div class="footer-pro-box footer-brand">
+        <h3>Pak Travel Spark</h3>
+        <img src="logo.png" alt="Pak Travel Spark Logo">
+        <p>Your trusted travel partner for Pakistan adventures, group tours, and custom trips.</p>
+      </div>
+      <div class="footer-pro-box">
+  <h3>Quick Links</h3>
+  <a href="../index-updated.html#destinations">Pakistan Tours</a>
+  <a href="../index-updated.html#group-tours">Group Tours</a>
+  <a href="../index-updated.html#reviews">Reviews</a>
+  <a href="../contact/contact.html">Contact Us</a>
+  <a href="../images/image.html">Gallery</a>
+  <a href="../blog/blog.html">Travel Blog</a>
+</div>
+
+      <div class="footer-pro-box">
+        <h3>Contact Info</h3>
+        <a href="tel:+923166564980"><i class="fa-solid fa-phone"></i> +92 316 656 4980</a>
+        <a href="mehikfatima3@gmail.com"><i class="fa-solid fa-envelope"></i> mehikfatima3@gmail.com</a>
+        <a href="https://www.google.com/maps?q=Allahabad%20Rajanpur%20Pakistan" target="_blank"><i class="fa-solid fa-location-dot"></i> Allahabad, Rajanpur</a>
+      </div>
+
+      <div class="footer-pro-box">
+        <h3>Follow Us</h3>
+        <div class="footer-pro-social">
+          <a href="https://facebook.com/yourpage" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com/yourpage" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com/yourchannel" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://twitter.com/yourpage" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <a class="footer-plan-btn" href="/#bookingBox">Plan Your Trip</a>
+      </div>
+    </div>
+
+    <div class="footer-pro-bottom"><p>&copy; 2026 Pak Travel Spark. All rights reserved.</p></div>
+  </footer>
+  <!-- ========================= -->
+<!-- FLOATING AI CHATBOT -->
+<!-- ========================= -->
+
+<div class="travel-chatbot-wrapper">
+
+  <!-- FLOATING ICON -->
+
+  <button class="chat-toggle-btn" id="chatToggleBtn">
+    💬
+  </button>
+
+  <!-- CHATBOT -->
+
+  <div class="travel-chatbot" id="travelChatbot">
+
+    <!-- HEADER -->
+
+    <div class="chat-header">
+
+      <div class="chat-header-left">
+        <h3>PAK Travel AI</h3>
+        <span>Smart Pakistan Travel Assistant</span>
+      </div>
+
+      <!-- CROSS BUTTON -->
+
+      <button class="close-chat-btn" id="closeChatBtn">
+        ✖
+      </button>
+
+    </div>
+
+    <!-- CHAT AREA -->
+
+    <div class="chat-body" id="chatBody">
+
+      <div class="bot-msg">
+
+        Assalamualaikum 👋 <br><br>
+
+        Main Pakistan AI Travel Assistant hun. <br><br>
+
+        Aap pooch sakte hain:
+        <br><br>
+
+        ✔ Routes <br>
+        ✔ Distance <br>
+        ✔ Safety <br>
+        ✔ Hotels <br>
+        ✔ Budget <br>
+        ✔ Travel Agencies <br>
+        ✔ Weather <br>
+        ✔ Maps <br>
+        ✔ Tour Packages
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="chat-footer">
+
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="Ask about Pakistan tours..."
+      >
+
+      <button id="sendBtn">➤</button>
+
+      <button id="voiceBtn">🎤</button>
+
+    </div>
+
+  </div>
+
+</div>
+  
+<script src="chitral.js"></script>
+</body>
+</html>

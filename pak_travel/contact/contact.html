@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Pak Travel Spark</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <header class="contact-nav">
+    <a href="../index-updated.html" class="logo">PAK <span>TRAVEL</span> SPARK</a>
+    <a href="../index-updated.html" class="back-home">Back to Home</a>
+  </header>
+
+  <section class="contact-hero">
+    <div class="hero-content">
+      <span>Pak Travel Spark</span>
+      <h1>Contact Our Travel Experts</h1>
+      <p>Private tours, group trips, hotel booking, transport, custom packages, family tours, honeymoon tours and university trips across Pakistan.</p>
+      <div class="hero-actions">
+        <a href="tel:+923166564980"><i class="fa-solid fa-phone"></i> Call Now</a>
+        <a href="#contactFormBox"><i class="fa-solid fa-paper-plane"></i> Send Inquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-page-section">
+    <div class="contact-page-container">
+      <div class="contact-page-info">
+        <span class="section-badge">Contact Details</span>
+        <h2>Get In Touch</h2>
+        <p>Need help planning your Pakistan tour? Share your details and our team will contact you with package options, pricing and availability.</p>
+
+        <a href="tel:+923166564980" class="contact-card">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <h4>Phone / Call Support</h4>
+            <p>+92 316 656 4980</p>
+          </div>
+        </a>
+
+        <a href="mailto:mehikfatima3@gmail.com" class="contact-card">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <p>mehikfatima3@gmail.com</p>
+          </div>
+        </a>
+
+        <a href="https://www.google.com/maps?q=Allahabad%20Rajanpur%20Pakistan" target="_blank" class="contact-card">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <h4>Office Location</h4>
+            <p>Allahabad, Rajanpur, Pakistan</p>
+          </div>
+        </a>
+
+        <div class="support-box">
+          <h3>Available Services</h3>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Private & family tours</li>
+            <li><i class="fa-solid fa-check"></i> Public group tours</li>
+            <li><i class="fa-solid fa-check"></i> Hotel and transport support</li>
+            <li><i class="fa-solid fa-check"></i> Custom affordable student trips</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contact-page-form" id="contactFormBox">
+        <span class="section-badge">Travel Inquiry Form</span>
+        <h2>Plan Your Trip</h2>
+        <p class="form-note">Form submit hone ke baad inquiry localStorage/admin record me save hogi. WhatsApp par redirect nahi hogi.</p>
+
+        <form id="contactPageForm">
+          <div class="form-grid">
+            <input type="text" id="contactName" placeholder="Full Name" required />
+            <input type="tel" id="contactPhone" placeholder="Phone Number" required />
+            <input type="email" id="contactEmail" placeholder="Email Address" required />
+            <input type="text" id="contactCity" placeholder="Your City / Pickup City" required />
+
+            <select id="contactService" required>
+              <option value="">Select Service</option>
+              <option value="Private Tour">Private Tour</option>
+              <option value="Public Group Tour">Public Group Tour</option>
+              <option value="Custom Tour">Custom Tour</option>
+              <option value="Hotel Booking">Hotel Booking</option>
+              <option value="Transport Booking">Transport Booking</option>
+              <option value="University / Student Trip">University / Student Trip</option>
+              <option value="Honeymoon Tour">Honeymoon Tour</option>
+              <option value="Family Tour">Family Tour</option>
+            </select>
+
+            <select id="contactDestination" required>
+              <option value="">Select Destination</option>
+              <option value="Hunza">Hunza</option>
+              <option value="Skardu">Skardu</option>
+              <option value="Swat">Swat</option>
+              <option value="Naran Kaghan">Naran Kaghan</option>
+              <option value="Murree">Murree</option>
+              <option value="Fairy Meadows">Fairy Meadows</option>
+              <option value="Chitral">Chitral</option>
+              <option value="Neelum Valley">Neelum Valley</option>
+              <option value="Lahore">Lahore</option>
+              <option value="Multan">Multan</option>
+              <option value="Other / Custom Destination">Other / Custom Destination</option>
+            </select>
+
+            <input type="date" id="travelDate" required />
+            <input type="number" id="travelers" placeholder="Total Travelers" min="1" required />
+
+            <select id="budgetRange" required>
+              <option value="">Budget Range</option>
+              <option value="Under Rs. 30,000">Under Rs. 30,000</option>
+              <option value="Rs. 30,000 - Rs. 60,000">Rs. 30,000 - Rs. 60,000</option>
+              <option value="Rs. 60,000 - Rs. 100,000">Rs. 60,000 - Rs. 100,000</option>
+              <option value="Above Rs. 100,000">Above Rs. 100,000</option>
+              <option value="Need suggestion">Need suggestion</option>
+            </select>
+
+            <select id="hotelType" required>
+              <option value="">Hotel Preference</option>
+              <option value="Budget Hotel">Budget Hotel</option>
+              <option value="Standard Hotel">Standard Hotel</option>
+              <option value="Premium Hotel">Premium Hotel</option>
+              <option value="Luxury Hotel">Luxury Hotel</option>
+              <option value="Camping / Cottage">Camping / Cottage</option>
+            </select>
+          </div>
+
+          <textarea id="contactMessage" placeholder="Write your message, special request, pickup details, room requirement, child details, or custom plan..." required></textarea>
+
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i> Submit Inquiry</button>
+          <p id="contactPageStatus"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-map">
+    <h2>Our Location</h2>
+    <p>Allahabad, Rajanpur, Pakistan</p>
+    <iframe src="https://www.google.com/maps?q=Allahabad%20Rajanpur%20Pakistan&output=embed" loading="lazy" allowfullscreen></iframe>
+  </section>
+
+  <footer class="contact-footer">
+    <p>© 2026 Pak Travel Spark. All rights reserved.</p>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>

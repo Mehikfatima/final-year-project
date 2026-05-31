@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>University Trips | Pak Travel Spark</title>
+  <link rel="stylesheet" href="university-trips.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header class="trip-nav">
+    <a href="../index-updated.html" class="logo">PAK <span>TRAVEL</span> SPARK</a>
+    <a href="../index-updated.html" class="home-link">Back to Home</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-left">
+      <!-- <div class="slides">
+        <img class="slide" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1400&auto=format&fit=crop" alt="Northern Pakistan Student Tour" />
+        <img class="slide" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop" alt="Student Adventure Tour" />
+      </div> -->
+      <div class="slides">
+
+  <img class="slide active"
+  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop"
+  alt="University Students Group Trip" />
+
+  <img class="slide"
+  src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1400&auto=format&fit=crop"
+  alt="Students Adventure Tour" />
+  <img class="slide"
+  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop"
+  alt="University Camping Tour" />
+
+  <img class="slide"
+  src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1400&auto=format&fit=crop"
+  alt="Pakistan Student Adventure" />
+
+</div>
+      <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>
+      <button class="slider-btn next" onclick="changeSlide(1)">❯</button>
+      <div class="hero-overlay">
+        <span>Affordable Student Packages</span>
+        <h1>University Trips for Pakistan Students</h1>
+        <p>Budget-friendly educational, adventure and cultural trips with city-wise route, stopping cities, vehicle-based payment and group discounts.</p>
+        <button class="primary-btn" onclick="document.getElementById('bookingPanel').scrollIntoView({behavior:'smooth'})">Plan Student Trip</button>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="map-header">
+        <div>
+          <h2>Smart Route Preview</h2>
+          <p>City aur package select karen, map automatic update hoga.</p>
+        </div>
+        <i class="fa-solid fa-route"></i>
+      </div>
+
+      <div class="quick-form">
+        <label>Starting City</label>
+        <select id="topCity">
+          <option value="Lahore">Lahore</option>
+          <option value="Islamabad">Islamabad</option>
+          <option value="Karachi">Karachi</option>
+          <option value="Multan">Multan</option>
+          <option value="Faisalabad">Faisalabad</option>
+          <option value="Peshawar">Peshawar</option>
+          <option value="Quetta">Quetta</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Sialkot">Sialkot</option>
+          <option value="Bahawalpur">Bahawalpur</option>
+        </select>
+
+        <label>Trip Package</label>
+        <select id="topPackage">
+          <option value="northern">Northern Adventure Trip</option>
+          <option value="heritage">Cultural Heritage Trip</option>
+          <option value="industrial">Educational Industrial Trip</option>
+          <option value="desert">Cholistan Desert Camp</option>
+          <option value="swat">Swat Kalam Student Tour</option>
+        </select>
+      </div>
+
+      <div class="price-note">
+        <strong id="topPrice">Rs. 18,500 per student</strong>
+        <span id="topRouteText">Lahore → Islamabad → Naran → Hunza</span>
+      </div>
+
+      <iframe id="routeMap" src="https://www.google.com/maps?q=Lahore%20to%20Hunza%20Pakistan&output=embed"></iframe>
+    </div>
+  </section>
+
+  <main>
+    <section class="stats-grid">
+      <div><i class="fa-solid fa-user-graduate"></i><strong>Students</strong><span>10-100 Group Size</span></div>
+      <div><i class="fa-solid fa-bus"></i><strong>Vehicles</strong><span>Coaster, Hiace, Bus</span></div>
+      <div><i class="fa-solid fa-hotel"></i><strong>Stay</strong><span>Hostel / Budget Hotel</span></div>
+      <div><i class="fa-solid fa-shield-halved"></i><strong>Safety</strong><span>Guide + Emergency Support</span></div>
+    </section>
+
+    <section class="panel">
+      <h2>Best University Student Packages</h2>
+      <p class="small-note">Packages Pakistan ke students ke liye affordable rakhe gaye hain. University society, department, batch group aur class tours ke liye best.</p>
+      <div class="package-grid">
+        <article class="package-card" data-package-card="northern">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop" alt="Northern Adventure Trip" />
+          <h3>Northern Adventure Trip</h3>
+          <p>Islamabad, Naran, Hunza, Attabad Lake, Passu Cones</p>
+          <strong>5 Days / 4 Nights</strong>
+        </article>
+        <article class="package-card" data-package-card="heritage">
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop" alt="Cultural Heritage Trip" />
+          <h3>Cultural Heritage Trip</h3>
+          <p>Lahore, Multan, Bahawalpur, Noor Mahal, Shrines</p>
+          <strong>3 Days / 2 Nights</strong>
+        </article>
+        <article class="package-card" data-package-card="industrial">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop" alt="Educational Industrial Trip" />
+          <h3>Educational Industrial Trip</h3>
+          <p>Software houses, factories, universities and career visits</p>
+          <strong>2 Days / 1 Night</strong>
+        </article>
+        <article class="package-card" data-package-card="desert">
+          <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=1200&auto=format&fit=crop" alt="Cholistan Desert Camp" />
+          <h3>Cholistan Desert Camp</h3>
+          <p>Bahawalpur, Derawar Fort, desert camping, bonfire</p>
+          <strong>3 Days / 2 Nights</strong>
+        </article>
+        <article class="package-card" data-package-card="swat">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Swat Kalam Student Tour" />
+          <h3>Swat Kalam Student Tour</h3>
+          <p>Mingora, Bahrain, Kalam, Malam Jabba and river views</p>
+          <strong>4 Days / 3 Nights</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel booking-panel" id="bookingPanel">
+      <h2>Student Trip Booking & Payment Calculator</h2>
+      <p class="small-note">City, package, vehicle, students aur hotel type select karen. Total payment automatic calculate ho jayegi.</p>
+
+      <form id="studentTripForm">
+        <div class="form-grid">
+          <input type="text" id="studentName" placeholder="Group Leader Name" required />
+          <input type="tel" id="studentPhone" placeholder="Phone / WhatsApp Number" required />
+          <input type="text" id="universityName" placeholder="University Name" required />
+          <input type="text" id="departmentName" placeholder="Department / Society Name" />
+          <input type="date" id="tripDate" required />
+          <input type="number" id="studentCount" min="10" value="20" placeholder="Total Students" required />
+
+          <select id="startCity" required>
+            <option value="">Select Starting City</option>
+            <option value="Lahore">Lahore</option>
+            <option value="Islamabad">Islamabad</option>
+            <option value="Karachi">Karachi</option>
+            <option value="Multan">Multan</option>
+            <option value="Faisalabad">Faisalabad</option>
+            <option value="Peshawar">Peshawar</option>
+            <option value="Quetta">Quetta</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Sialkot">Sialkot</option>
+            <option value="Bahawalpur">Bahawalpur</option>
+            <option value="Other">Other City / Custom</option>
+          </select>
+
+          <input type="text" id="customCity" class="hidden" placeholder="Enter your city" />
+
+          <select id="tripPackage" required>
+            <option value="">Select Trip Package</option>
+            <option value="northern">Northern Adventure Trip</option>
+            <option value="heritage">Cultural Heritage Trip</option>
+            <option value="industrial">Educational Industrial Trip</option>
+            <option value="desert">Cholistan Desert Camp</option>
+            <option value="swat">Swat Kalam Student Tour</option>
+          </select>
+
+          <select id="vehicleChoice" required>
+            <option value="">Select Vehicle</option>
+            <option value="coaster">Coaster - 20 to 25 Students</option>
+            <option value="hiace">Hiace - 10 to 14 Students</option>
+            <option value="luxuryBus">Luxury Bus - 35 to 45 Students</option>
+            <option value="sleeperBus">Sleeper Bus - Long Route</option>
+          </select>
+
+          <select id="stayType" required>
+            <option value="">Select Stay Type</option>
+            <option value="hostel">Student Hostel / Shared Rooms</option>
+            <option value="budget">Budget Hotel</option>
+            <option value="standard">Standard Hotel</option>
+            <option value="premium">Premium Hotel</option>
+          </select>
+
+          <select id="pickupPoint" required>
+            <option value="">Pickup Point</option>
+            <option value="University Main Gate">University Main Gate</option>
+            <option value="Bus Terminal">Bus Terminal</option>
+            <option value="Railway Station">Railway Station</option>
+            <option value="Custom Pickup Point">Custom Pickup Point</option>
+          </select>
+
+          <input type="text" id="pickupAddress" placeholder="Exact pickup address / landmark" />
+        </div>
+
+        <textarea id="specialNote" placeholder="Special request: female-only seats, teacher seats, extra meal, photography, etc."></textarea>
+
+        <div class="calculator-box">
+          <h3>Live Payment Summary</h3>
+          <p><strong>Selected Route:</strong> <span id="selectedRoute">Please select city and package</span></p>
+          <p><strong>Stopping Cities:</strong> <span id="stoppingCities">---</span></p>
+          <p><strong>Vehicle:</strong> <span id="selectedVehicle">---</span></p>
+          <p><strong>Stay:</strong> <span id="selectedStay">---</span></p>
+          <p><strong>Per Student:</strong> <span id="perStudentPrice">Rs. 0</span></p>
+          <p><strong>Group Discount:</strong> <span id="discountText">Rs. 0</span></p>
+          <p class="grand-total"><strong>Total Payment:</strong> <span id="totalPayment">Rs. 0</span></p>
+          <p><strong>Next Process:</strong> Admin will confirm final seats, driver contact, vehicle number, pickup time and hotel rooms.</p>
+        </div>
+
+        <h3 class="payment-title">Payment Option</h3>
+        <div class="payment-options">
+          <label><input type="radio" name="paymentType" value="No Advance" checked /> No advance now</label>
+          <label><input type="radio" name="paymentType" value="Advance Payment" /> Advance payment</label>
+          <label><input type="radio" name="paymentType" value="Full Payment" /> Full payment</label>
+        </div>
+
+        <div class="account-box hidden" id="accountBox">
+          <h4>Admin Account Details</h4>
+          <p><strong>JazzCash/EasyPaisa:</strong> 0316-6564980</p>
+          <p><strong>Account Title:</strong> Pak Travel Spark</p>
+          <input type="file" id="paymentScreenshot" accept="image/*" />
+          <small>Advance/full payment ke baad screenshot upload kar dein.</small>
+        </div>
+
+        <button type="submit" class="primary-btn">Submit Student Trip Request</button>
+      </form>
+      <div id="confirmationMsg" class="confirmation hidden"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Suggested Itinerary</h2>
+      <div id="itineraryBox" class="itinerary-box"></div>
+    </section>
+
+    <section class="panel include-grid">
+      <div>
+        <h2>Included</h2>
+        <p><i class="fa-solid fa-check"></i> Transport with fuel and tolls</p>
+        <p><i class="fa-solid fa-check"></i> Student-friendly hotel/hostel stay</p>
+        <p><i class="fa-solid fa-check"></i> Tour guide / coordinator</p>
+        <p><i class="fa-solid fa-check"></i> Basic first-aid support</p>
+        <p><i class="fa-solid fa-check"></i> Bonfire where possible</p>
+      </div>
+      <div>
+        <h2>Not Included</h2>
+        <p><i class="fa-solid fa-xmark"></i> Personal shopping</p>
+        <p><i class="fa-solid fa-xmark"></i> Extra meals</p>
+        <p><i class="fa-solid fa-xmark"></i> Chairlift / entry tickets unless mentioned</p>
+        <p><i class="fa-solid fa-xmark"></i> Emergency personal expenses</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Why This Package Is Best for Students?</h2>
+      <div class="benefit-grid">
+        <div><i class="fa-solid fa-wallet"></i><h3>Affordable</h3><p>Shared transport and rooms reduce per-student cost.</p></div>
+        <div><i class="fa-solid fa-users"></i><h3>Group Friendly</h3><p>Best for departments, societies, batches and class trips.</p></div>
+        <div><i class="fa-solid fa-map-location-dot"></i><h3>Location Based</h3><p>Route and price change automatically according to city.</p></div>
+        <div><i class="fa-solid fa-user-shield"></i><h3>Safe</h3><p>Teacher seats, group leader record and emergency support.</p></div>
+      </div>
+    </section>
+
+    <section class="tour-faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item"><button>Can students book without advance payment? <i class="fa-solid fa-plus"></i></button><p>Yes. “No advance now” select kar ke request submit ho sakti hai. Admin later confirmation karega.</p></div>
+      <div class="faq-item"><button>Will payment change by starting city? <i class="fa-solid fa-plus"></i></button><p>Yes. Distance, vehicle, package, stay type and total students ke according payment change hogi.</p></div>
+      <div class="faq-item"><button>Can university teachers join the trip? <i class="fa-solid fa-plus"></i></button><p>Yes. Teachers, coordinators and society heads ke seats group booking me add ho sakte hain.</p></div>
+      <div class="faq-item"><button>Is this suitable for female students? <i class="fa-solid fa-plus"></i></button><p>Yes. Female-only seating, family-friendly hotels and teacher/coordinator support arrange kiya ja sakta hai.</p></div>
+      <div class="faq-item"><button>Can package be customized? <i class="fa-solid fa-plus"></i></button><p>Yes. Destination, duration, hotel type, meals, activities and vehicle customize ho sakte hain.</p></div>
+    </section>
+  </main>
+
+  <div class="student-chatbot-wrapper">
+    <button class="chat-toggle-btn" id="chatToggleBtn"><i class="fa-solid fa-comments"></i></button>
+    <div class="student-chatbot" id="studentChatbot">
+      <div class="chat-header">
+        <div><h3>Student Trip Assistant</h3><span>Ask about budget, route or packages</span></div>
+        <button id="closeChatBtn">×</button>
+      </div>
+      <div class="chat-body" id="chatBody"><div class="bot-msg">Hi! Apni city aur students count batao, main best affordable package suggest kar dunga.</div></div>
+      <div class="chat-footer">
+        <input type="text" id="chatInput" placeholder="Ask about student trip..." />
+        <button id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 Pak Travel Spark | University Student Trips</p>
+  </footer>
+
+  <script src="university-trips.js"></script>
+</body>
+</html>

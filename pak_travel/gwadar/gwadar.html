@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gwadar Coastal Adventure Tour | Pak Travel Spark</title>
+  <link rel="stylesheet" href="gwadar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header class="tour-detail-nav">
+  <a href="../index-updated.html" class="tour-logo">PAK <span>TRAVEL</span> SPARK</a>
+  <a href="../index-updated.html">Back to Home</a>
+</header>
+<section class="tour-split-hero">
+  <div class="hero-image hero-slider">
+    <div class="slides">
+  <img class="slide active" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400&auto=format&fit=crop" alt="Gwadar beach coastline">
+  <img class="slide" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1400&auto=format&fit=crop" alt="Makran desert landscape">
+  <img class="slide" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1400&auto=format&fit=crop" alt="Kund Malir beach">
+  <img class="slide" src="https://images.unsplash.com/photo-1489493887464-892be6d1daae?q=80&w=1400&auto=format&fit=crop" alt="Coastal sunset Gwadar">
+</div>
+
+    <button class="slider-btn prev" onclick="changeHeroSlide(-1)">❮</button>
+    <button class="slider-btn next" onclick="changeHeroSlide(1)">❯</button>
+
+    <title>Gwadar Tour | Pak Travel Spark</title>
+    <div class="hero-overlay">
+         <span>4 Days / 3 Nights</span>
+         <h1>Gwadar Coastal Adventure Tour</h1>
+<p>Explore Princess of Hope, Kund Malir Beach and the desert + sea combo with comfortable transport, coastal sightseeing, hotel options and easy online booking.</p>
+        </div>
+  </div>
+
+  <div class="tour-map-card">
+    <div class="map-card-header">
+      <div>
+  <h2>Route to Gwadar</h2>       
+  <p>Select your starting coastal to view route and estimated package price.</p>
+</div>
+      <i class="fa-solid fa-route"></i>
+    </div>
+    <div class="start-location-box">
+      <label for="startLocation">Tour Start Location</label>
+      <select id="startLocation">
+  <option value="Gwadar" data-price="12000">Gwadar Local Coastal Tour - Rs. 12,000 per person</option>
+  <option value="Karachi" data-price="28000">Karachi → Gwadar via Makran Coastal Highway - Rs. 28,000 per person</option>
+  <option value="Quetta" data-price="30000">Quetta → Gwadar Coastal Tour - Rs. 30,000 per person</option>
+  <option value="Turbat" data-price="18000">Turbat → Gwadar Coastal Tour - Rs. 18,000 per person</option>
+  <option value="Ormara" data-price="16000">Ormara → Gwadar Coastal Tour - Rs. 16,000 per person</option>
+  <option value="Lahore" data-price="52000">Lahore → Gwadar Coastal Tour - Rs. 52,000 per person</option>
+  <option value="Islamabad" data-price="54000">Islamabad → Gwadar Coastal Tour - Rs. 54,000 per person</option>
+  <option value="Rawalpindi" data-price="54000">Rawalpindi → Gwadar Coastal Tour - Rs. 54,000 per person</option>
+  <option value="Multan" data-price="47000">Multan → Gwadar Coastal Tour - Rs. 47,000 per person</option>
+  <option value="Faisalabad" data-price="52000">Faisalabad → Gwadar Coastal Tour - Rs. 52,000 per person</option>
+  <option value="Peshawar" data-price="58000">Peshawar → Gwadar Coastal Tour - Rs. 58,000 per person</option>
+  <option value="custom" data-price="0">Other City / Custom Location</option>
+</select>
+      <input type="text" id="customLocation" placeholder="Enter your coastal, e.g. Sialkot" class="hide">
+
+      <div class="price-note">
+        <strong id="priceText">Rs. 12,000 per person</strong>
+        <span>Charges starting destination ke according change hon gy.</span>
+      </div>
+    </div>
+    <div class="hero-map">
+  <iframe 
+    id="routeMap"
+    src="https://www.google.com/maps?q=Gwadar%20Pakistan&output=embed">
+  </iframe>
+
+  <div class="route-box">
+    <strong>Route Preview</strong>
+    <p id="routeText">
+      Select your starting coastal to show route to Gwadar.
+    </p>
+  </div>
+</div>
+
+  </div>
+</section>
+<section class="tour-detail-main single-column">
+  <div class="tour-detail-content">
+    <div class="tour-info-grid">
+      <div><i class="fa-solid fa-clock"></i><strong>Duration</strong><span>4 Days</span></div>
+      <div><i class="fa-solid fa-users"></i><strong>Group Size</strong><span>2-20 Persons</span></div>
+      <div><i class="fa-solid fa-hotel"></i><strong>Hotel</strong><span>Included</span></div>
+      <div><i class="fa-solid fa-car"></i><strong>Transport</strong><span>Included</span></div>
+    </div>
+
+    <section class="tour-panel booking-start-panel" id="bookingBox">
+      <h2>Do you want to book this Gwadar coastal adventure tour?</h2>
+      <p>Click below. First login/register, then fill traveler details. Your start location, total payment, payment method and screenshot will be saved in booking record.</p>
+      <button id="startBookingBtn" class="primary-btn">Book Now</button>
+    </section>
+    <section class="tour-panel booking-flow hidden" id="authPanel">
+      <button class="close-auth-btn" id="closeAuthPanel">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h2>Login / Register</h2>
+      <p class="small-note">
+        Already registered user login karega.
+        New user register kar sakta hai.
+      </p>
+      <div class="auth-tabs">
+        <button class="active" data-auth="login">
+          Login
+        </button>
+        <button data-auth="register">
+          Register
+        </button>
+      </div>
+      <form id="authForm">
+        <input type="text"
+        id="authName"
+        placeholder="Full Name"
+        class="register-only hidden">
+        <input type="tel"
+        id="authPhone"
+        placeholder="Phone Number"
+        required>
+        <input type="password"
+        id="authPassword"
+        placeholder="Password"
+        required>
+        <button type="submit"
+        class="primary-btn"
+        id="authSubmitBtn">
+        Login
+      </button>
+    </form>
+  </section>
+
+    <section class="tour-panel booking-flow hidden" id="previousRecordPanel">
+      <h2>Your Previous Booking</h2>
+      <div id="previousBookingBox"></div>
+      <button id="newBookingBtn" class="secondary-btn">Make New Booking</button>
+    </section>
+
+    <section class="tour-panel booking-flow hidden" id="bookingFormPanel">
+      <h2>Traveler & Payment Details</h2>
+      <div class="seat-box"><span>Seats Left</span><strong id="seatsLeft">14</strong></div>
+      <form id="tourBookingForm">
+       <input type="hidden" id="tourName" value="Gwadar Coastal Adventure Tour">
+        <div class="form-grid">
+          <input type="text" id="customerName" placeholder="Customer Name" required>
+          <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+          <input type="text" id="customerCnic" placeholder="CNIC / ID Card Number" required>
+          <input type="date" id="travelDate" required>
+          <input type="number" id="guestCount" placeholder="Total Travelers" min="1" required>
+          <input type="number" id="roomCount" placeholder="Total Hotel Rooms" min="1" value="1" required>
+          <input type="text" id="startCity" placeholder="From Location e.g. Karachi, Lahore, Islamabad, Quetta" required>
+          <select id="hotelChoice" required>
+            <option value="standardHotel">Standard Gwadar Hotel - Comfortable</option>
+            <option value="premiumHotel">Premium Sea View Hotel - Luxury</option>
+            <option value="budgetGuestHouse">Budget Guest House - Economy</option>
+            <option value="familyRoom">Family Room Sharing - Private</option>
+            <option value="seaView">Sea View Stay - Scenic</option>
+          </select>
+        </div>
+        <div class="price-preview">
+          <p><strong>Destination:</strong> Gwadar Coastal Adventure</p>
+          <p><strong>Route:</strong> <span id="calculatedRoute">Please enter start city</span></p>
+          <p><strong>Selected Hotel:</strong> <span id="selectedHotelText">Please select hotel</span></p>
+          <p><strong>Transport + Tour Price:</strong> <span id="basePriceText">Rs. 0</span></p>
+          <p><strong>Child Policy:</strong> 0–4 years free, 5–8 years 50% charges, 9+ years full charges</p>
+          <p><strong>Hotel Rooms:</strong> <span id="roomCountText">1 room</span></p>
+          <p><strong>Hotel Charges:</strong> <span id="hotelPriceText">Rs. 0</span></p>
+          <p><strong>Total Payment:</strong> <span id="calculatedPrice">Rs. 0</span></p>
+        </div>
+        <div class="traveler-dynamic-area">
+          <h3>Travelers Information</h3>
+          <p class="small-note">Total travelers ke according fields automatically add hon gi. Child select karne par CNIC required nahi hoga, lekin name, age aur gender required rahen ge.</p>
+          <div id="travelerFields"></div>
+        </div>
+        <textarea id="bookingNote" placeholder="Special request / pickup detail"></textarea>
+
+        <h3 class="payment-title">Payment Option</h3>
+        <div class="payment-options">
+          <label><input type="radio" name="paymentType" value="No Advance" checked> No advance now</label>
+          <label><input type="radio" name="paymentType" value="Advance Payment"> Advance payment</label>
+          <label><input type="radio" name="paymentType" value="Full Payment"> Full payment</label>
+        </div>
+        <div class="account-box hidden" id="accountBox">
+          <h4>Admin Account Details</h4>
+          <p><strong>JazzCash/EasyPaisa:</strong> 0316-6564980</p>
+          <p><strong>Account Title:</strong> Pak Travel Spark</p>
+          <p><strong>Bank:</strong> HBL / Account No: 1234-567890-01</p>
+          <input type="file" id="paymentScreenshot" accept="image/*">
+          <small>Advance/full payment karne ke baad screenshot upload kar dein.</small>
+        </div>
+        <button type="submit" class="primary-btn">Submit Booking</button>
+      </form>
+      <div class="confirmation hidden" id="confirmationMsg"></div>
+    </section>
+    <section class="tour-panel">
+  <h2>Tour Overview</h2>
+  <p>Gwadar Coastal Adventure Tour is a very unique Pakistan trip combining beach, desert, coastal highway views and Balochistan landscapes. The package covers Princess of Hope, Kund Malir Beach, Hingol National Park desert scenery, Gwadar Marine Drive, beach sunset points and optional boat/sea-view experiences. Booking form includes payment options, hotel selection, traveler records, route map and admin confirmation.</p>
+</section>
+    <section class="tour-panel hotel-section">
+  <h2>5 Gwadar Hotel & Stay Packages</h2>
+  <p class="small-note">Hotel card par click karen, map us hotel/stay location ko show karega.</p>
+
+  <div class="hotel-grid">
+    <article class="hotel-card clickable-hotel" data-hotel="Zaver Pearl Continental Hotel Gwadar Pakistan">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop" alt="Premium Sea View Hotel Gwadar">
+      <h3>Premium Sea View Hotel</h3>
+      <p>Luxury sea-view stay suitable for families, honeymoon trips and executive coastal tours.</p>
+      <span>Package Adjustment: +Rs. 8,000 per traveler</span>
+    </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Gwadar Business Center hotel Pakistan">
+      <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop" alt="Standard Gwadar Hotel">
+      <h3>Standard Gwadar Hotel</h3>
+      <p>Comfortable hotel option with easy access to Marine Drive, port view and city food spots.</p>
+      <span>Package Adjustment: +Rs. 5,000 per traveler</span>
+    </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Gwadar guest house Pakistan">
+      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop" alt="Budget Guest House Gwadar">
+      <h3>Budget Guest House</h3>
+      <p>Affordable stay for students, friends and low-budget travelers exploring Gwadar.</p>
+      <span>Package Adjustment: +Rs. 2,500 per traveler</span>
+    </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Gwadar family hotel Pakistan">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Family Room Gwadar">
+      <h3>Family Room Sharing</h3>
+      <p>Private family accommodation for comfortable overnight Gwadar coastal stays.</p>
+      <span>Package Adjustment: +Rs. 6,000 per traveler</span>
+    </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Gwadar Marine Drive hotel Pakistan">
+      <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop" alt="Sea View Stay Gwadar">
+      <h3>Sea View Stay</h3>
+      <p>Scenic stay close to sea views, sunset points and Gwadar Marine Drive.</p>
+      <span>Package Adjustment: +Rs. 4,000 per traveler</span>
+    </article>
+  </div>
+</section>
+
+<section class="tour-panel package-places">
+  <h2>Places Included in Gwadar Coastal Adventure Tour</h2>
+  <p class="small-note">Kisi bhi place par click karen, map us place ki location show karega.</p>
+
+  <div class="places-grid">
+    <div class="place-card" data-place="Princess of Hope Hingol National Park Balochistan Pakistan">
+      <i class="fa-solid fa-mountain-sun"></i>
+      <strong>Princess of Hope</strong>
+      <span>Iconic natural rock formation on Makran Coastal Highway</span>
+    </div>
+
+    <div class="place-card" data-place="Kund Malir Beach Balochistan Pakistan">
+      <i class="fa-solid fa-water"></i>
+      <strong>Kund Malir Beach</strong>
+      <span>Beautiful beach stop with clean coastal views</span>
+    </div>
+
+    <div class="place-card" data-place="Hingol National Park Balochistan Pakistan">
+      <i class="fa-solid fa-mountain"></i>
+      <strong>Desert + Sea Combo</strong>
+      <span>Rare landscape where desert mountains meet the Arabian Sea</span>
+    </div>
+
+    <div class="place-card" data-place="Makran Coastal Highway Pakistan">
+      <i class="fa-solid fa-road"></i>
+      <strong>Makran Coastal Highway</strong>
+      <span>Scenic drive with mountains, beaches and photography points</span>
+    </div>
+
+    <div class="place-card" data-place="Gwadar Marine Drive Pakistan">
+      <i class="fa-solid fa-ship"></i>
+      <strong>Gwadar Marine Drive</strong>
+      <span>Sea-view road, sunset photography and relaxing coastal vibe</span>
+    </div>
+
+    <div class="place-card" data-place="Hammerhead Gwadar Pakistan">
+      <i class="fa-solid fa-binoculars"></i>
+      <strong>Hammerhead Viewpoint</strong>
+      <span>Famous viewpoint for panoramic Gwadar coastline</span>
+    </div>
+  </div>
+</section>
+<section class="tour-panel">
+  <h2>Suggested Day Plan</h2>
+
+  <div class="itinerary-item">
+    <span>Day 1</span>
+    <div>
+      <h3>Departure to Gwadar / Karachi Pickup</h3>
+      <p>Pickup from selected city, route briefing, coastal highway journey and hotel check-in after arrival.</p>
+    </div>
+  </div>
+
+  <div class="itinerary-item">
+    <span>Day 2</span>
+    <div>
+      <h3>Princess of Hope + Kund Malir Beach</h3>
+      <p>Visit Princess of Hope, enjoy Hingol desert landscapes, stop at Kund Malir Beach and capture the desert + sea combo.</p>
+    </div>
+  </div>
+
+  <div class="itinerary-item">
+    <span>Day 3</span>
+    <div>
+      <h3>Gwadar Marine Drive + Hammerhead Viewpoint</h3>
+      <p>Explore Gwadar city, Marine Drive, port view, sunset point and optional beach/boat experience where available.</p>
+    </div>
+  </div>
+
+  <div class="itinerary-item">
+    <span>Day 4</span>
+    <div>
+      <h3>Breakfast + Return Journey</h3>
+      <p>Breakfast, checkout, final photography stop and return journey to selected city/location.</p>
+    </div>
+  </div>
+</section>
+<section class="tour-panel include-grid"><div><h2>Included</h2><p><i class="fa-solid fa-check"></i> Hotel accommodation</p><p><i class="fa-solid fa-check"></i> Private/group transport</p><p><i class="fa-solid fa-check"></i> Driver support</p><p><i class="fa-solid fa-check"></i> Fuel and tolls</p></div><div><h2>Not Included</h2><p><i class="fa-solid fa-xmark"></i> Personal shopping</p><p><i class="fa-solid fa-xmark"></i> Extra meals</p><p><i class="fa-solid fa-xmark"></i> Entry tickets / boat ride where not mentioned</p><p><i class="fa-solid fa-xmark"></i> Emergency expense</p></div></section>
+  </div>
+</section>
+ <section id="destinations">
+    <h2 class="section-title">Popular Destinations</h2>
+    <div class="grid">
+        <div class="card destination-card">
+          <a href="../fairy_meadows/fairy-meadows.html"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop"alt="Fairy Meadows"></a>
+          <h3>Fairy Meadows</h3>
+          <p>Best Season: June to September</p>
+          <p>Route Difficulty: Moderate to Hard</p>
+        </div>
+     <div class="card destination-card">
+      <a href="../multan/multan.html"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop"alt="Multan"></a>
+      <h3>Multan</h3>
+      <p>Best Season: October to March</p>
+      <p>Route Difficulty: Easy</p>
+    </div>
+    <div class="card destination-card">
+        <a href="../university-trips-files/university-trips.html"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop"alt="University Students Tour Pakistan"></a>
+        <h3>University Trip</h3>
+        <p>Best Season: March to October</p>
+        <p>Package Type: Affordable Student Tour</p>
+      </div>
+<div class="card destination-card">
+  <a href="../chitral/chitral.html"><img 
+    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop"
+    alt="Chitral"></a>
+    <h3>Chitral</h3>
+    <p>Best Season: May to September</p>
+    <p>Route Difficulty: Medium</p>
+</div>
+<div class="card destination-card">
+  <a href="../naran-kaghan/naran-kaghan.html"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop"
+    alt="Naran Kaghan"></a>
+    <h3>Naran Kaghan</h3>
+    <p>Best Season: May to September</p>
+    <p>Route Difficulty: Moderate</p>
+  </div>
+</div>
+</section>
+<section class="tour-faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <button>Can I book Gwadar Coastal Tour without advance payment?<i class="fa-solid fa-plus"></i></button>
+    <p>Yes. User “No advance now” option select kar ke booking submit kar sakta hai. Remaining payment admin later confirm karega.</p>
+  </div>
+
+  <div class="faq-item">
+    <button>Will Gwadar package price change by starting city?<i class="fa-solid fa-plus"></i></button>
+    <p>Yes. Tour price selected city, distance, total travelers and selected hotel package ke according calculate hota hai.</p>
+  </div>
+
+  <div class="faq-item">
+    <button>Are Princess of Hope and Kund Malir Beach included?<i class="fa-solid fa-plus"></i></button>
+    <p>Yes. Package me Princess of Hope, Kund Malir Beach, Hingol desert views, Makran Coastal Highway and Gwadar Marine Drive included hain.</p>
+  </div>
+
+  <div class="faq-item">
+    <button>What is special about this tour?<i class="fa-solid fa-plus"></i></button>
+    <p>Gwadar tour unique hai kyun ke is me desert mountains aur Arabian Sea ka rare combination milta hai.</p>
+  </div>
+
+  <div class="faq-item">
+    <button>Can hotel package be selected during booking?<i class="fa-solid fa-plus"></i></button>
+    <p>Yes. User selected hotel/stay package booking record me save hoga. Final room availability admin confirm karega.</p>
+  </div>
+</section>
+<!-- FOOTER -->
+  <footer class="footer-pro">
+    <div class="footer-pro-container">
+      <div class="footer-pro-box footer-brand">
+        <h3>Pak Travel Spark</h3>
+        <img src="logo.png" alt="Pak Travel Spark Logo">
+        <p>Your trusted travel partner for Pakistan adventures, group tours, and custom trips.</p>
+      </div>
+
+        <div class="footer-pro-box">
+  <h3>Quick Links</h3>
+  <a href="../index-updated.html#destinations">Pakistan Tours</a>
+  <a href="../index-updated.html#group-tours">Group Tours</a>
+  <a href="../index-updated.html#reviews">Reviews</a>
+  <a href="../contact/contact.html">Contact Us</a>
+  <a href="../images/image.html">Gallery</a>
+  <a href="../blog/blog.html">Travel Blog</a>
+</div>
+
+      <div class="footer-pro-box">
+        <h3>Contact Info</h3>
+        <a href="tel:+923166564980"><i class="fa-solid fa-phone"></i> +92 316 656 4980</a>
+        <a href="mehikfatima3@gmail.com"><i class="fa-solid fa-envelope"></i> mehikfatima3@gmail.com</a>
+        <a href="https://www.google.com/maps?q=Allahabad%20Rajanpur%20Pakistan" target="_blank"><i class="fa-solid fa-location-dot"></i> Allahabad, Rajanpur</a>
+      </div>
+
+      <div class="footer-pro-box">
+        <h3>Follow Us</h3>
+        <div class="footer-pro-social">
+          <a href="https://facebook.com/yourpage" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com/yourpage" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com/yourchannel" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://twitter.com/yourpage" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <a class="footer-plan-btn" href="#bookingBox">Plan Your Trip</a>
+      </div>
+    </div>
+
+    <div class="footer-pro-bottom"><p>&copy; 2026 Pak Travel Spark. All rights reserved.</p></div>
+  </footer>
+  <!-- ========================= -->
+<!-- FLOATING AI CHATBOT -->
+<!-- ========================= -->
+
+<div class="travel-chatbot-wrapper">
+
+  <!-- FLOATING ICON -->
+
+  <button class="chat-toggle-btn" id="chatToggleBtn">
+    💬
+  </button>
+
+  <!-- CHATBOT -->
+
+  <div class="travel-chatbot" id="travelChatbot">
+
+    <!-- HEADER -->
+
+    <div class="chat-header">
+
+      <div class="chat-header-left">
+        <h3>PAK Travel AI</h3>
+        <span>Smart Pakistan Travel Assistant</span>
+      </div>
+
+      <!-- CROSS BUTTON -->
+
+      <button class="close-chat-btn" id="closeChatBtn">
+        ✖
+      </button>
+
+    </div>
+
+    <!-- CHAT AREA -->
+
+    <div class="chat-body" id="chatBody">
+
+      <div class="bot-msg">
+
+        Assalamualaikum 👋 <br><br>
+
+        Main Pakistan AI Travel Assistant hun. <br><br>
+
+        Aap pooch sakte hain:
+        <br><br>
+
+        ✔ Routes <br>
+        ✔ Distance <br>
+        ✔ Safety <br>
+        ✔ Hotels <br>
+        ✔ Budget <br>
+        ✔ Travel Agencies <br>
+        ✔ Weather <br>
+        ✔ Maps <br>
+        ✔ Tour Packages
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="chat-footer">
+
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="Ask about Pakistan tours..."
+      >
+
+      <button id="sendBtn">➤</button>
+
+      <button id="voiceBtn">🎤</button>
+
+    </div>
+
+  </div>
+
+</div>
+  
+<script src="gwadar.js"></script>
+</body>
+</html>

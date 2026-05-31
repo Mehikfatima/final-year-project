@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skardu Group Tour | Pak Travel Spark</title>
+  <link rel="stylesheet" href="skardu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header class="tour-detail-nav">
+  <a href="../index-updated.html" class="tour-logo">PAK <span>TRAVEL</span> SPARK</a>
+  <a href="../index-updated.html">Back to Home</a>
+</header>
+<section class="tour-split-hero">
+  <div class="hero-image hero-slider">
+    <div class="slides">
+  <img class="slide active" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1400&auto=format&fit=crop" alt="Skardu mountain landscape">
+  <img class="slide" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1400&auto=format&fit=crop" alt="Skardu lake and mountains">
+  <img class="slide" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1400&auto=format&fit=crop" alt="Deosai plains near Skardu">
+  <img class="slide" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1400&auto=format&fit=crop" alt="Katpana cold desert Skardu">
+</div>
+
+    <button class="slider-btn prev" onclick="changeHeroSlide(-1)">❮</button>
+    <button class="slider-btn next" onclick="changeHeroSlide(1)">❯</button>
+
+    <title>Skardu Tour | Pak Travel Spark</title>
+    <div class="hero-overlay">
+         <span>5 Days / 4 Nights</span>
+         <h1>Skardu Group Tour</h1>
+<p>Explore Deosai, Shangrila, Katpana Desert and Upper Kachura with comfortable transport, mountain sightseeing, hotel options and easy online booking.</p>
+        </div>
+  </div>
+
+  <div class="tour-map-card">
+    <div class="map-card-header">
+      <div>
+  <h2>Route to Skardu</h2>       
+  <p>Select your starting city to view route and estimated package price.</p>
+</div>
+      <i class="fa-solid fa-route"></i>
+    </div>
+    <div class="start-location-box">
+      <label for="startLocation">Tour Start Location</label>
+      <select id="startLocation">
+  <option value="Skardu" data-price="14000">Skardu Local Group Tour - Rs. 14,000 per person</option>
+  <option value="Islamabad" data-price="42000">Islamabad → Skardu Group Tour - Rs. 42,000 per person</option>
+  <option value="Rawalpindi" data-price="42000">Rawalpindi → Skardu Group Tour - Rs. 42,000 per person</option>
+  <option value="Lahore" data-price="48000">Lahore → Skardu Group Tour - Rs. 48,000 per person</option>
+  <option value="Karachi" data-price="68000">Karachi → Skardu Group Tour - Rs. 68,000 per person</option>
+  <option value="Peshawar" data-price="45000">Peshawar → Skardu Group Tour - Rs. 45,000 per person</option>
+  <option value="Faisalabad" data-price="50000">Faisalabad → Skardu Group Tour - Rs. 50,000 per person</option>
+  <option value="Multan" data-price="56000">Multan → Skardu Group Tour - Rs. 56,000 per person</option>
+  <option value="Sialkot" data-price="49000">Sialkot → Skardu Group Tour - Rs. 49,000 per person</option>
+  <option value="Gilgit" data-price="18000">Gilgit → Skardu Group Tour - Rs. 18,000 per person</option>
+  <option value="custom" data-price="0">Other City / Custom Location</option>
+</select>
+      <input type="text" id="customLocation" placeholder="Enter your city, e.g. Sialkot" class="hide">
+
+      <div class="price-note">
+        <strong id="priceText">Rs. 12,000 per person</strong>
+        <span>Charges starting destination ke according change hon gy.</span>
+      </div>
+    </div>
+    <div class="hero-map">
+  <iframe 
+    id="routeMap"
+    src="https://www.google.com/maps?q=Skardu%20Pakistan&output=embed">
+  </iframe>
+
+  <div class="route-box">
+    <strong>Route Preview</strong>
+    <p id="routeText">
+      Select your starting city to show route to Skardu.
+    </p>
+  </div>
+</div>
+
+  </div>
+</section>
+<section class="tour-detail-main single-column">
+  <div class="tour-detail-content">
+    <div class="tour-info-grid">
+      <div><i class="fa-solid fa-clock"></i><strong>Duration</strong><span>4 Days</span></div>
+      <div><i class="fa-solid fa-users"></i><strong>Group Size</strong><span>2-20 Persons</span></div>
+      <div><i class="fa-solid fa-hotel"></i><strong>Hotel</strong><span>Included</span></div>
+      <div><i class="fa-solid fa-car"></i><strong>Transport</strong><span>Included</span></div>
+    </div>
+
+    <section class="tour-panel booking-start-panel" id="bookingBox">
+      <h2>Do you want to book this Skardu city adventure tour?</h2>
+      <p>Click below. First login/register, then fill traveler details. Your start location, total payment, payment method and screenshot will be saved in booking record.</p>
+      <button id="startBookingBtn" class="primary-btn">Book Now</button>
+    </section>
+    <section class="tour-panel booking-flow hidden" id="authPanel">
+      <button class="close-auth-btn" id="closeAuthPanel">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h2>Login / Register</h2>
+      <p class="small-note">
+        Already registered user login karega.
+        New user register kar sakta hai.
+      </p>
+      <div class="auth-tabs">
+        <button class="active" data-auth="login">
+          Login
+        </button>
+        <button data-auth="register">
+          Register
+        </button>
+      </div>
+      <form id="authForm">
+        <input type="text"
+        id="authName"
+        placeholder="Full Name"
+        class="register-only hidden">
+        <input type="tel"
+        id="authPhone"
+        placeholder="Phone Number"
+        required>
+        <input type="password"
+        id="authPassword"
+        placeholder="Password"
+        required>
+        <button type="submit"
+        class="primary-btn"
+        id="authSubmitBtn">
+        Login
+      </button>
+    </form>
+  </section>
+
+    <section class="tour-panel booking-flow hidden" id="previousRecordPanel">
+      <h2>Your Previous Booking</h2>
+      <div id="previousBookingBox"></div>
+      <button id="newBookingBtn" class="secondary-btn">Make New Booking</button>
+    </section>
+
+    <section class="tour-panel booking-flow hidden" id="bookingFormPanel">
+      <h2>Traveler & Payment Details</h2>
+      <div class="seat-box"><span>Seats Left</span><strong id="seatsLeft">18</strong></div>
+      <form id="tourBookingForm">
+       <input type="hidden" id="tourName" value="Skardu Group Tour">
+        <div class="form-grid">
+          <input type="text" id="customerName" placeholder="Customer Name" required>
+          <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+          <input type="text" id="customerCnic" placeholder="CNIC / ID Card Number" required>
+          <input type="date" id="travelDate" required>
+          <input type="number" id="guestCount" placeholder="Total Travelers" min="1" required>
+          <input type="number" id="roomCount" placeholder="Total Hotel Rooms" min="1" value="1" required>
+          <input type="text" id="startCity" placeholder="From Location e.g. Islamabad, Lahore, Karachi, Skardu" required>
+          <select id="hotelChoice" required>
+            <option value="standardHotel">Standard Skardu Hotel - Comfortable</option>
+            <option value="premiumHotel">Premium Shangrila / Lake View Hotel - Luxury</option>
+            <option value="budgetGuestHouse">Budget Skardu Guest House - Economy</option>
+            <option value="familyRoom">Family Room Hotel - Private</option>
+            <option value="honeymoonSuite">Honeymoon Suite - Couple Package</option>
+          </select>
+        </div>
+        <div class="price-preview">
+          <p><strong>Destination:</strong> Skardu City Adventure</p>
+          <p><strong>Route:</strong> <span id="calculatedRoute">Please enter start city</span></p>
+          <p><strong>Selected Hotel:</strong> <span id="selectedHotelText">Please select hotel</span></p>
+          <p><strong>Transport + Tour Price:</strong> <span id="basePriceText">Rs. 0</span></p>
+          <p><strong>Child Policy:</strong> 0–4 years free, 5–8 years 50% charges, 9+ years full charges</p>
+          <p><strong>Hotel Rooms:</strong> <span id="roomCountText">1 room</span></p>
+          <p><strong>Hotel Charges:</strong> <span id="hotelPriceText">Rs. 0</span></p>
+          <p><strong>Total Payment:</strong> <span id="calculatedPrice">Rs. 0</span></p>
+        </div>
+        <div class="traveler-dynamic-area">
+          <h3>Travelers Information</h3>
+          <p class="small-note">Total travelers ke according fields automatically add hon gi. Child select karne par CNIC required nahi hoga, lekin name, age aur gender required rahen ge.</p>
+          <div id="travelerFields"></div>
+        </div>
+        <textarea id="bookingNote" placeholder="Special request / pickup detail"></textarea>
+
+        <h3 class="payment-title">Payment Option</h3>
+        <div class="payment-options">
+          <label><input type="radio" name="paymentType" value="No Advance" checked> No advance now</label>
+          <label><input type="radio" name="paymentType" value="Advance Payment"> Advance payment</label>
+          <label><input type="radio" name="paymentType" value="Full Payment"> Full payment</label>
+        </div>
+        <div class="account-box hidden" id="accountBox">
+          <h4>Admin Account Details</h4>
+          <p><strong>JazzCash/EasyPaisa:</strong> 0316-6564980</p>
+          <p><strong>Account Title:</strong> Pak Travel Spark</p>
+          <p><strong>Bank:</strong> HBL / Account No: 1234-567890-01</p>
+          <input type="file" id="paymentScreenshot" accept="image/*">
+          <small>Advance/full payment karne ke baad screenshot upload kar dein.</small>
+        </div>
+        <button type="submit" class="primary-btn">Submit Booking</button>
+      </form>
+      <div class="confirmation hidden" id="confirmationMsg"></div>
+    </section>
+    <section class="tour-panel">
+  <h2>Tour Overview</h2>
+  <p>Skardu Group Tour is one of the most demanded Pakistan trips after Hunza. It is ideal for families, honeymoon couples and adventure lovers. This package includes Deosai, Shangrila, Katpana Cold Desert, Upper Kachura Lake, mountain-view hotels, route map, traveler details, payment options and room-based hotel pricing.</p>
+</section>
+    <section class="tour-panel hotel-section">
+  <h2>5 Skardu Hotel & Room Packages</h2>
+  <p class="small-note">Client total rooms khud enter karega. Hotel charges room-count ke according automatically calculate hon gy. Hotel card par click karen, map us hotel/stay location ko show karega.</p>
+
+  <div class="hotel-grid">
+    <article class="hotel-card clickable-hotel" data-hotel="Shangrila Resort Skardu Pakistan">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop" alt="Premium Shangrila Lake View Hotel Skardu">
+      <h3>Premium Shangrila / Lake View Hotel</h3>
+      <p>Luxury lake-view stay best for honeymoon, families and premium Skardu tours.</p>
+      <span>Room Charges: +Rs. 18,000 per room</span>
+    </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Hotel One Skardu Pakistan">
+      <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop" alt="Standard Skardu Hotel">
+      <h3>Standard Skardu Hotel</h3>
+      <p>Comfortable room option with city access and mountain surroundings.</p>
+      <span>Room Charges: +Rs. 10,000 per room</span>
+    </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Skardu guest house Pakistan">
+      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop" alt="Budget Guest House Skardu">
+      <h3>Budget Skardu Guest House</h3>
+      <p>Affordable stay for students, friends and low-budget group travelers.</p>
+      <span>Room Charges: +Rs. 6,000 per room</span>
+    </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Family hotel Skardu Pakistan">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Family Room Skardu">
+      <h3>Family Room Hotel</h3>
+      <p>Private family rooms suitable for families with kids and group privacy.</p>
+      <span>Room Charges: +Rs. 14,000 per room</span>
+    </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Skardu honeymoon suite hotel Pakistan">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Honeymoon Suite Skardu">
+      <h3>Honeymoon Suite</h3>
+      <p>Couple-friendly premium room option with romantic mountain/lake ambience.</p>
+      <span>Room Charges: +Rs. 22,000 per room</span>
+    </article>
+  </div>
+</section>
+
+<section class="tour-panel package-places">
+  <h2>Places Included in Skardu Group Tour</h2>
+  <p class="small-note">Kisi bhi place par click karen, map us place ki location show karega.</p>
+
+  <div class="places-grid">
+    <div class="place-card" data-place="Deosai National Park Skardu Pakistan">
+      <i class="fa-solid fa-mountain-sun"></i>
+      <strong>Deosai</strong>
+      <span>High-altitude plains, wildlife and adventure views</span>
+    </div>
+
+    <div class="place-card" data-place="Shangrila Resort Skardu Pakistan">
+      <i class="fa-solid fa-water"></i>
+      <strong>Shangrila</strong>
+      <span>Iconic resort lake, photography and family sightseeing</span>
+    </div>
+
+    <div class="place-card" data-place="Katpana Desert Skardu Pakistan">
+      <i class="fa-solid fa-mountain"></i>
+      <strong>Katpana Desert</strong>
+      <span>Cold desert experience with mountains and sand dunes</span>
+    </div>
+
+    <div class="place-card" data-place="Upper Kachura Lake Skardu Pakistan">
+      <i class="fa-solid fa-water"></i>
+      <strong>Upper Kachura</strong>
+      <span>Clear lake, boating, photography and peaceful views</span>
+    </div>
+
+    <div class="place-card" data-place="Manthokha Waterfall Skardu Pakistan">
+      <i class="fa-solid fa-water"></i>
+      <strong>Manthokha Waterfall</strong>
+      <span>Optional waterfall stop for families and groups</span>
+    </div>
+
+    <div class="place-card" data-place="Skardu Fort Pakistan">
+      <i class="fa-solid fa-fort-awesome"></i>
+      <strong>Skardu Fort</strong>
+      <span>Historic viewpoint and cultural sightseeing</span>
+    </div>
+  </div>
+</section>
+<section class="tour-panel">
+  <h2>Suggested Day Plan</h2>
+
+  <div class="itinerary-item">
+    <span>Day 1</span>
+    <div>
+      <h3>Departure / Arrival in Skardu</h3>
+      <p>Pickup from selected city or airport, transfer to hotel, rest and evening visit to Skardu bazaar or viewpoint.</p>
+    </div>
+  </div>
+
+  <div class="itinerary-item">
+    <span>Day 2</span>
+    <div>
+      <h3>Shangrila + Upper Kachura</h3>
+      <p>Breakfast, visit Shangrila Resort area, Upper Kachura Lake, boating/photography and return to hotel.</p>
+    </div>
+  </div>
+
+  <div class="itinerary-item">
+    <span>Day 3</span>
+    <div>
+      <h3>Deosai Adventure Day</h3>
+      <p>Full-day Deosai Plains sightseeing with jeep arrangement where required, wildlife views and mountain photography.</p>
+    </div>
+  </div>
+
+  <div class="itinerary-item">
+    <span>Day 4</span>
+    <div>
+      <h3>Katpana Cold Desert + Local Sightseeing</h3>
+      <p>Visit Katpana Desert, Skardu Fort, optional Manthokha Waterfall and family/honeymoon photo stops.</p>
+    </div>
+  </div>
+
+  <div class="itinerary-item">
+    <span>Day 5</span>
+    <div>
+      <h3>Return Journey</h3>
+      <p>Breakfast, checkout and return to selected city/airport with memories of Skardu.</p>
+    </div>
+  </div>
+</section>
+<section class="tour-panel include-grid"><div><h2>Included</h2><p><i class="fa-solid fa-check"></i> Hotel accommodation</p><p><i class="fa-solid fa-check"></i> Private/group transport</p><p><i class="fa-solid fa-check"></i> Driver support</p><p><i class="fa-solid fa-check"></i> Fuel and tolls</p></div><div><h2>Not Included</h2><p><i class="fa-solid fa-xmark"></i> Personal shopping</p><p><i class="fa-solid fa-xmark"></i> Extra meals</p><p><i class="fa-solid fa-xmark"></i> Entry tickets / boat ride where not mentioned</p><p><i class="fa-solid fa-xmark"></i> Emergency expense</p></div></section>
+  </div>
+</section>
+ <section id="destinations">
+    <h2 class="section-title">Popular Destinations</h2>
+    <div class="grid">
+        <div class="card destination-card">
+          <a href="../fairy_meadows/fairy-meadows.html"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop"alt="Fairy Meadows"></a>
+          <h3>Fairy Meadows</h3>
+          <p>Best Season: June to September</p>
+          <p>Route Difficulty: Moderate to Hard</p>
+        </div>
+     <div class="card destination-card">
+      <a href="../multan/multan.html"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop"alt="Multan"></a>
+      <h3>Multan</h3>
+      <p>Best Season: October to March</p>
+      <p>Route Difficulty: Easy</p>
+    </div>
+    <div class="card destination-card">
+        <a href="../university-trips-files/university-trips.html"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop"alt="University Students Tour Pakistan"></a>
+        <h3>University Trip</h3>
+        <p>Best Season: March to October</p>
+        <p>Package Type: Affordable Student Tour</p>
+      </div>
+<div class="card destination-card">
+  <a href="../chitral/chitral.html"><img 
+    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop"
+    alt="Chitral"></a>
+    <h3>Chitral</h3>
+    <p>Best Season: May to September</p>
+    <p>Route Difficulty: Medium</p>
+</div>
+<div class="card destination-card">
+  <a href="../naran-kaghan/naran-kaghan.html"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop"
+    alt="Naran Kaghan"></a>
+    <h3>Naran Kaghan</h3>
+    <p>Best Season: May to September</p>
+    <p>Route Difficulty: Moderate</p>
+  </div>
+</div>
+</section>
+<section class="tour-faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <button>Can I book Skardu Group Tour without advance payment?<i class="fa-solid fa-plus"></i></button>
+    <p>Yes. User “No advance now” option select kar ke booking submit kar sakta hai. Remaining payment admin later confirm karega.</p>
+  </div>
+
+  <div class="faq-item">
+    <button>Will Skardu package price change by starting city?<i class="fa-solid fa-plus"></i></button>
+    <p>Yes. Tour price selected city, distance, total travelers and selected hotel package ke according calculate hota hai.</p>
+  </div>
+
+  <div class="faq-item">
+    <button>Are Deosai, Shangrila, Katpana Desert and Upper Kachura included?<i class="fa-solid fa-plus"></i></button>
+    <p>Yes. Package me Deosai, Shangrila, Katpana Cold Desert, Upper Kachura Lake aur Skardu local sightseeing included hain.</p>
+  </div>
+
+  <div class="faq-item">
+    <button>What is special about this tour?<i class="fa-solid fa-plus"></i></button>
+    <p>Skardu tour unique hai kyun ke is me lakes, mountains, cold desert aur Deosai adventure ka rare combination milta hai.</p>
+  </div>
+
+  <div class="faq-item">
+    <button>Can client enter hotel rooms during booking?<i class="fa-solid fa-plus"></i></button>
+    <p>Yes. Client total hotel rooms khud enter karega aur total payment room-count ke mutabiq automatically calculate hogi.</p>
+  </div>
+</section>
+<!-- FOOTER -->
+  <footer class="footer-pro">
+    <div class="footer-pro-container">
+      <div class="footer-pro-box footer-brand">
+        <h3>Pak Travel Spark</h3>
+        <img src="logo.png" alt="Pak Travel Spark Logo">
+        <p>Your trusted travel partner for Pakistan adventures, group tours, and custom trips.</p>
+      </div>
+
+        <div class="footer-pro-box">
+  <h3>Quick Links</h3>
+  <a href="../index-updated.html#destinations">Pakistan Tours</a>
+  <a href="../index-updated.html#group-tours">Group Tours</a>
+  <a href="../index-updated.html#reviews">Reviews</a>
+  <a href="../contact/contact.html">Contact Us</a>
+  <a href="../images/image.html">Gallery</a>
+  <a href="../blog/blog.html">Travel Blog</a>
+</div>
+
+      <div class="footer-pro-box">
+        <h3>Contact Info</h3>
+        <a href="tel:+923166564980"><i class="fa-solid fa-phone"></i> +92 316 656 4980</a>
+        <a href="mailto:mehikfatima3@gmail.com"><i class="fa-solid fa-envelope"></i> mehikfatima3@gmail.com</a>
+        <a href="https://www.google.com/maps?q=Allahabad%20Rajanpur%20Pakistan" target="_blank"><i class="fa-solid fa-location-dot"></i> Allahabad, Rajanpur</a>
+      </div>
+
+      <div class="footer-pro-box">
+        <h3>Follow Us</h3>
+        <div class="footer-pro-social">
+          <a href="https://facebook.com/yourpage" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com/yourpage" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com/yourchannel" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://twitter.com/yourpage" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <a class="footer-plan-btn" href="#bookingBox">Plan Your Trip</a>
+      </div>
+    </div>
+
+    <div class="footer-pro-bottom"><p>&copy; 2026 Pak Travel Spark. All rights reserved.</p></div>
+  </footer>
+  <!-- ========================= -->
+<!-- FLOATING AI CHATBOT -->
+<!-- ========================= -->
+
+<div class="travel-chatbot-wrapper">
+
+  <!-- FLOATING ICON -->
+
+  <button class="chat-toggle-btn" id="chatToggleBtn">
+    💬
+  </button>
+
+  <!-- CHATBOT -->
+
+  <div class="travel-chatbot" id="travelChatbot">
+
+    <!-- HEADER -->
+
+    <div class="chat-header">
+
+      <div class="chat-header-left">
+        <h3>PAK Travel AI</h3>
+        <span>Smart Pakistan Travel Assistant</span>
+      </div>
+
+      <!-- CROSS BUTTON -->
+
+      <button class="close-chat-btn" id="closeChatBtn">
+        ✖
+      </button>
+
+    </div>
+
+    <!-- CHAT AREA -->
+
+    <div class="chat-body" id="chatBody">
+
+      <div class="bot-msg">
+
+        Assalamualaikum 👋 <br><br>
+
+        Main Pakistan AI Travel Assistant hun. <br><br>
+
+        Aap pooch sakte hain:
+        <br><br>
+
+        ✔ Routes <br>
+        ✔ Distance <br>
+        ✔ Safety <br>
+        ✔ Hotels <br>
+        ✔ Budget <br>
+        ✔ Travel Agencies <br>
+        ✔ Weather <br>
+        ✔ Maps <br>
+        ✔ Tour Packages
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="chat-footer">
+
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="Ask about Pakistan tours..."
+      >
+
+      <button id="sendBtn">➤</button>
+
+      <button id="voiceBtn">🎤</button>
+
+    </div>
+
+  </div>
+
+</div>
+  
+<script src="skardu.js"></script>
+</body>
+</html>

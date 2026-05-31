@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shogran Public Tour | Pak Travel Spark</title>
+  <link rel="stylesheet" href="shogran-updated.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header class="tour-detail-nav">
+  <a href="../index-updated.html" class="tour-logo">PAK <span>TRAVEL</span> SPARK</a>
+  <a href="../index-updated.html">Back to Home</a>
+</header>
+<section class="tour-split-hero">
+  <div class="hero-image hero-slider">
+    <div class="slides">
+  <img class="slide active" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1400&auto=format&fit=crop" alt="Shogran Mountains">
+  <img class="slide" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop" alt="Shogran Forest">
+  <img class="slide" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1400&auto=format&fit=crop" alt="Siri Paye Meadows">
+  <img class="slide" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1400&auto=format&fit=crop" alt="Kaghan Valley Mountains">
+</div>
+
+    <button class="slider-btn prev" onclick="changeHeroSlide(-1)">❮</button>
+    <button class="slider-btn next" onclick="changeHeroSlide(1)">❯</button>
+
+    <title>Shogran Tour | Pak Travel Spark</title>
+    <div class="hero-overlay">
+         <span>2 Days / 1 Night</span>
+         <h1>Shogran Public Group Tour</h1>
+<p>Explore Kiwai, Shogran, Siri Paye Meadows and Kaghan Valley with comfortable transport, group environment and scenic mountain views.</p>
+        </div>
+  </div>
+
+  <div class="tour-map-card">
+    <div class="map-card-header">
+      <div>
+  <h2>Route to Shogran</h2>       
+  <p>Select your starting city to view route and estimated package price.</p>
+</div>
+      <i class="fa-solid fa-route"></i>
+    </div>
+    <div class="start-location-box">
+      <label for="startLocation">Tour Start Location</label>
+      <select id="startLocation">
+  <option value="Islamabad" data-price="11000">Islamabad → Shogran (230 km) - Rs. 11,000 per person</option>
+  <option value="Rawalpindi" data-price="11000">Rawalpindi → Shogran (225 km) - Rs. 11,000 per person</option>
+  <option value="Lahore" data-price="17000">Lahore → Shogran (560 km) - Rs. 17,000 per person</option>
+  <option value="Peshawar" data-price="15000">Peshawar → Shogran (330 km) - Rs. 15,000 per person</option>
+  <option value="Faisalabad" data-price="18000">Faisalabad → Shogran (610 km) - Rs. 18,000 per person</option>
+  <option value="Multan" data-price="23000">Multan → Shogran (800 km) - Rs. 23,000 per person</option>
+  <option value="Karachi" data-price="42000">Karachi → Shogran (1450 km) - Rs. 42,000 per person</option>
+  <option value="Sialkot" data-price="18000">Sialkot → Shogran (540 km) - Rs. 18,000 per person</option>
+  <option value="Gujranwala" data-price="17000">Gujranwala → Shogran (510 km) - Rs. 17,000 per person</option>
+  <option value="Abbottabad" data-price="9000">Abbottabad → Shogran (120 km) - Rs. 9,000 per person</option>
+  <option value="Mansehra" data-price="8500">Mansehra → Shogran (75 km) - Rs. 8,500 per person</option>
+  <option value="custom" data-price="0">Other City / Custom Location</option>
+</select>
+      <input type="text" id="customLocation" placeholder="Enter your city, e.g. Sialkot" class="hide">
+
+      <div class="price-note">
+        <strong id="priceText">Rs. 18,000 per person</strong>
+        <span>Charges starting destination ke according change hon gy.</span>
+      </div>
+    </div>
+    <div class="hero-map">
+  <iframe 
+    id="routeMap"
+    src="https://www.google.com/maps?q=Shogran%20Pakistan&output=embed">
+  </iframe>
+
+  <div class="route-box">
+    <strong>Route Preview</strong>
+    <p id="routeText">
+      Select your starting city to show route to Shogran.
+    </p>
+  </div>
+</div>
+
+  </div>
+</section>
+<section class="tour-detail-main single-column">
+  <div class="tour-detail-content">
+    <div class="tour-info-grid">
+      <div><i class="fa-solid fa-clock"></i><strong>Duration</strong><span>2 Days</span></div>
+      <div><i class="fa-solid fa-users"></i><strong>Group Size</strong><span>2-20 Persons</span></div>
+      <div><i class="fa-solid fa-hotel"></i><strong>Hotel</strong><span>Included</span></div>
+      <div><i class="fa-solid fa-car"></i><strong>Transport</strong><span>Included</span></div>
+    </div>
+
+    <section class="tour-panel booking-start-panel" id="bookingBox">
+      <h2>Do you want to book this shogran tour?</h2>
+      <p>Click below. First login/register, then fill traveler details. Your start location, total payment, payment method and screenshot will be saved in booking record.</p>
+      <button id="startBookingBtn" class="primary-btn">Book Now</button>
+    </section>
+    <section class="tour-panel booking-flow hidden" id="authPanel">
+      <button class="close-auth-btn" id="closeAuthPanel">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h2>Login / Register</h2>
+      <p class="small-note">
+        Already registered user login karega.
+        New user register kar sakta hai.
+      </p>
+      <div class="auth-tabs">
+        <button class="active" data-auth="login">
+          Login
+        </button>
+        <button data-auth="register">
+          Register
+        </button>
+      </div>
+      <form id="authForm">
+        <input type="text"
+        id="authName"
+        placeholder="Full Name"
+        class="register-only hidden">
+        <input type="tel"
+        id="authPhone"
+        placeholder="Phone Number"
+        required>
+        <input type="password"
+        id="authPassword"
+        placeholder="Password"
+        required>
+        <button type="submit"
+        class="primary-btn"
+        id="authSubmitBtn">
+        Login
+      </button>
+    </form>
+  </section>
+
+    <section class="tour-panel booking-flow hidden" id="previousRecordPanel">
+      <h2>Your Previous Booking</h2>
+      <div id="previousBookingBox"></div>
+      <button id="newBookingBtn" class="secondary-btn">Make New Booking</button>
+    </section>
+
+    <section class="tour-panel booking-flow hidden" id="bookingFormPanel">
+      <h2>Traveler & Payment Details</h2>
+      <div class="seat-box"><span>Seats Left</span><strong id="seatsLeft">14</strong></div>
+      <form id="tourBookingForm">
+       <input type="hidden" id="tourName" value="Shogran Public Group Tour">
+        <div class="form-grid">
+          <input type="text" id="customerName" placeholder="Customer Name" required>
+          <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+          <input type="text" id="customerCnic" placeholder="CNIC / ID Card Number" required>
+          <input type="date" id="travelDate" required>
+          <input type="number" id="guestCount" placeholder="Total Travelers" min="1" required>
+          <input type="number" id="roomCount" placeholder="Total Hotel Rooms" min="1" value="1" required>
+          <input type="text" id="startCity" placeholder="From Location e.g. Lahore, Rajanpur, Islamabad" required>
+          <select id="hotelChoice" required>
+            <option value="standardHotel">Standard Shogran Hotel - Comfortable</option>
+            <option value="premiumHotel">Premium Shogran Hotel - Luxury</option>
+            <option value="budgetGuestHouse">Budget Guest House - Economy</option>
+            <option value="familyRoom">Family Room Sharing - Private</option>
+            <option value="camping">Camping / Bonfire Package - Adventure</option>
+          </select>
+        </div>
+        <div class="price-preview">
+          <p><strong>Destination:</strong> Shogran Public Group Tour</p>
+          <p><strong>Route:</strong> <span id="calculatedRoute">Please enter start city</span></p>
+          <p><strong>Selected Hotel:</strong> <span id="selectedHotelText">Please select hotel</span></p>
+          <p><strong>Transport + Tour Price:</strong> <span id="basePriceText">Rs. 0</span></p>
+          <p><strong>Child Policy:</strong> 0–4 years free, 5–8 years 50% charges, 9+ years full charges</p>
+          <p><strong>Hotel Rooms:</strong> <span id="roomCountText">1 room</span></p>
+          <p><strong>Hotel Charges:</strong> <span id="hotelPriceText">Rs. 0</span></p>
+          <p><strong>Total Payment:</strong> <span id="calculatedPrice">Rs. 0</span></p>
+        </div>
+        <div class="traveler-dynamic-area">
+          <h3>Travelers Information</h3>
+          <p class="small-note">Total travelers ke according fields automatically add hon gi. Child select karne par CNIC required nahi hoga, lekin name, age aur gender required rahen ge.</p>
+          <div id="travelerFields"></div>
+        </div>
+        <textarea id="bookingNote" placeholder="Special request / pickup detail"></textarea>
+
+        <h3 class="payment-title">Payment Option</h3>
+        <div class="payment-options">
+          <label><input type="radio" name="paymentType" value="No Advance" checked> No advance now</label>
+          <label><input type="radio" name="paymentType" value="Advance Payment"> Advance payment</label>
+          <label><input type="radio" name="paymentType" value="Full Payment"> Full payment</label>
+        </div>
+        <div class="account-box hidden" id="accountBox">
+          <h4>Admin Account Details</h4>
+          <p><strong>JazzCash/EasyPaisa:</strong> 0316-6564980</p>
+          <p><strong>Account Title:</strong> Pak Travel Spark</p>
+          <p><strong>Bank:</strong> HBL / Account No: 1234-567890-01</p>
+          <input type="file" id="paymentScreenshot" accept="image/*">
+          <small>Advance/full payment karne ke baad screenshot upload kar dein.</small>
+        </div>
+        <button type="submit" class="primary-btn">Submit Booking</button>
+      </form>
+      <div class="confirmation hidden" id="confirmationMsg"></div>
+    </section>
+    <section class="tour-panel">
+  <h2>Tour Overview</h2>
+  <p>Shogran is one of Pakistan’s most beautiful weekend destinations, famous for its green forests, cool weather, mountain views, and Siri Paye Meadows. This public group tour is best for families, students, friends, photographers, and nature lovers. Package includes group transport, hotel stay, sightseeing, bonfire, and optional jeep ride to Siri Paye.</p>
+</section>
+    <section class="tour-panel hotel-section">
+  <h2>5 Shogran Hotel & Stay Packages</h2>
+  <p class="small-note">Hotel card par click karen, map us hotel/stay location ko show karega.</p>
+
+  <div class="hotel-grid">
+
+    <article class="hotel-card clickable-hotel" data-hotel="Arcadian Sprucewoods Shogran Pakistan">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop" alt="Premium Shogran Hotel">
+      <h3>Premium Shogran Resort</h3>
+      <p>Luxury mountain-view resort best for couples, families and honeymoon trips.</p>
+      <span>Package Adjustment: +Rs. 6,000 per traveler</span>
+    </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Pine Park Hotel Shogran Pakistan">
+      <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop" alt="Standard Shogran Hotel">
+      <h3>Standard Shogran Hotel</h3>
+      <p>Comfortable stay with beautiful forest and mountain surroundings.</p>
+      <span>Package Adjustment: +Rs. 3,000 per traveler</span>
+    </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Budget Guest House Shogran Pakistan">
+      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop" alt="Budget Guest House Shogran">
+      <h3>Budget Guest House</h3>
+      <p>Affordable public tour stay for students, friends and low-budget travelers.</p>
+      <span>Package Adjustment: +Rs. 1,500 per traveler</span>
+    </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Family Cottage Shogran Pakistan">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Family Cottage Shogran">
+      <h3>Family Cottage Stay</h3>
+      <p>Private family accommodation with peaceful environment and scenic views.</p>
+      <span>Package Adjustment: +Rs. 4,500 per traveler</span>
+    </article>
+
+    <article class="hotel-card clickable-hotel" data-hotel="Camping Site Siri Paye Shogran Pakistan">
+      <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=1200&auto=format&fit=crop" alt="Shogran Camping Package">
+      <h3>Camping & Bonfire Package</h3>
+      <p>Adventure camping experience with bonfire, music and mountain atmosphere.</p>
+      <span>Package Adjustment: +Rs. 2,500 per traveler</span>
+    </article>
+
+  </div>
+</section>
+
+<section class="tour-panel package-places">
+  <h2>Places Included in Shogran Public Tour</h2>
+  <p class="small-note">Kisi bhi place par click karen, map us place ki location show karega.</p>
+
+  <div class="places-grid">
+
+    <div class="place-card" data-place="Kiwai Waterfall Pakistan">
+      <i class="fa-solid fa-water"></i>
+      <strong>Kiwai Waterfall</strong>
+      <span>Beautiful waterfall and refreshment stop</span>
+    </div>
+
+    <div class="place-card" data-place="Shogran Pakistan">
+      <i class="fa-solid fa-tree"></i>
+      <strong>Shogran</strong>
+      <span>Green forests and scenic mountain stay</span>
+    </div>
+
+    <div class="place-card" data-place="Siri Paye Meadows Pakistan">
+      <i class="fa-solid fa-mountain"></i>
+      <strong>Siri Paye Meadows</strong>
+      <span>Jeep track and stunning meadow views</span>
+    </div>
+
+    <div class="place-card" data-place="Kaghan Valley Pakistan">
+      <i class="fa-solid fa-road"></i>
+      <strong>Kaghan Valley</strong>
+      <span>Scenic valley route and sightseeing</span>
+    </div>
+
+    <div class="place-card" data-place="Balakot Pakistan">
+      <i class="fa-solid fa-location-dot"></i>
+      <strong>Balakot</strong>
+      <span>Famous travel stop with river views</span>
+    </div>
+
+    <div class="place-card" data-place="Shogran Pakistan">
+      <i class="fa-solid fa-heart"></i>
+      <strong>Best For</strong>
+      <span>Families, students and weekend travelers</span>
+    </div>
+
+  </div>
+</section>
+<section class="tour-panel">
+  <h2>Suggested Day Plan</h2>
+
+  <div class="itinerary-item">
+    <span>Day 1</span>
+    <div>
+      <h3>Departure to Shogran</h3>
+      <p>Pickup from selected city, travel via Hazara Motorway, short stop at Kiwai Waterfall, arrival in Shogran and night stay.</p>
+    </div>
+  </div>
+
+  <div class="itinerary-item">
+    <span>Day 2</span>
+    <div>
+      <h3>Siri Paye Meadows + Return</h3>
+      <p>Breakfast, optional jeep ride to Siri Paye Meadows, sightseeing, photography, then return journey to selected city.</p>
+    </div>
+  </div>
+</section>
+<section class="tour-panel include-grid"><div><h2>Included</h2><p><i class="fa-solid fa-check"></i> Hotel accommodation</p><p><i class="fa-solid fa-check"></i> Private/group transport</p><p><i class="fa-solid fa-check"></i> Driver support</p><p><i class="fa-solid fa-check"></i> Fuel and tolls</p></div><div><h2>Not Included</h2><p><i class="fa-solid fa-xmark"></i> Personal shopping</p><p><i class="fa-solid fa-xmark"></i> Extra meals</p><p><i class="fa-solid fa-xmark"></i> Jeep / entry tickets where not mentioned</p><p><i class="fa-solid fa-xmark"></i> Emergency expense</p></div></section>
+  </div>
+</section>
+ <section id="destinations">
+    <h2 class="section-title">Popular Destinations</h2>
+    <div class="grid">
+        <div class="card destination-card">
+          <a href="../fairy_meadows/fairy-meadows.html"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop"alt="Fairy Meadows"></a>
+          <h3>Fairy Meadows</h3>
+          <p>Best Season: June to September</p>
+          <p>Route Difficulty: Moderate to Hard</p>
+        </div>
+     <div class="card destination-card">
+      <a href="../multan/multan.html"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop"alt="Multan"></a>
+      <h3>Multan</h3>
+      <p>Best Season: October to March</p>
+      <p>Route Difficulty: Easy</p>
+    </div>
+    <div class="card destination-card">
+        <a href="../university-trips-files/university-trips.html"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop"alt="University Students Tour Pakistan"></a>
+        <h3>University Trip</h3>
+        <p>Best Season: March to October</p>
+        <p>Package Type: Affordable Student Tour</p>
+      </div>
+<div class="card destination-card">
+  <a href="../chitral/chitral.html"><img 
+    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop"
+    alt="Chitral"></a>
+    <h3>Chitral</h3>
+    <p>Best Season: May to September</p>
+    <p>Route Difficulty: Medium</p>
+</div>
+<div class="card destination-card">
+  <a href="../naran-kaghan/naran-kaghan.html"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop"
+    alt="Naran Kaghan"></a>
+    <h3>Naran Kaghan</h3>
+    <p>Best Season: May to September</p>
+    <p>Route Difficulty: Moderate</p>
+  </div>
+</div>
+</section>
+<section class="tour-faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <button>
+      Can I book Shogran Public Tour without advance payment?
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <p>
+      Yes. User “No advance now” option select kar ke booking submit kar sakta hai. Remaining payment admin later confirm karega.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <button>
+      Will Shogran package price change by starting city?
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <p>
+      Yes. Tour price automatically selected city, distance and total travelers ke according calculate hota hai.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <button>
+      Are Kiwai, Siri Paye and Kaghan Valley included in package?
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <p>
+      Yes. Main Shogran public tour package me Kiwai Waterfall, Shogran sightseeing, Siri Paye Meadows aur Kaghan Valley route included hota hai.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <button>
+      Is Shogran safe for families and students?
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <p>
+      Yes. Shogran is considered one of the safest and family-friendly tourist destinations in Northern Pakistan and is very popular for university and weekend group tours.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <button>
+      Is hotel/camping package fixed?
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <p>
+      User selected hotel or camping package booking record me save hoga. Final room and camp availability admin confirm karega.
+    </p>
+  </div>
+
+</section>
+<!-- FOOTER -->
+  <footer class="footer-pro">
+    <div class="footer-pro-container">
+      <div class="footer-pro-box footer-brand">
+        <h3>Pak Travel Spark</h3>
+        <img src="logo.png" alt="Pak Travel Spark Logo">
+        <p>Your trusted travel partner for Pakistan adventures, group tours, and custom trips.</p>
+      </div>
+
+       <div class="footer-pro-box">
+  <h3>Quick Links</h3>
+  <a href="../index-updated.html#destinations">Pakistan Tours</a>
+  <a href="../index-updated.html#group-tours">Group Tours</a>
+  <a href="../index-updated.html#reviews">Reviews</a>
+  <a href="../contact/contact.html">Contact Us</a>
+  <a href="../images/image.html">Gallery</a>
+  <a href="../blog/blog.html">Travel Blog</a>
+</div>
+
+      <div class="footer-pro-box">
+        <h3>Contact Info</h3>
+        <a href="tel:+923166564980"><i class="fa-solid fa-phone"></i> +92 316 656 4980</a>
+        <a href="mehikfatima3@gmail.com"><i class="fa-solid fa-envelope"></i> mehikfatima3@gmail.com</a>
+        <a href="https://www.google.com/maps?q=Allahabad%20Rajanpur%20Pakistan" target="_blank"><i class="fa-solid fa-location-dot"></i> Allahabad, Rajanpur</a>
+      </div>
+
+      <div class="footer-pro-box">
+        <h3>Follow Us</h3>
+        <div class="footer-pro-social">
+          <a href="https://facebook.com/yourpage" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com/yourpage" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com/yourchannel" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://twitter.com/yourpage" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <a class="footer-plan-btn" href="#bookingBox">Plan Your Trip</a>
+      </div>
+    </div>
+
+    <div class="footer-pro-bottom"><p>&copy; 2026 Pak Travel Spark. All rights reserved.</p></div>
+  </footer>
+  <!-- ========================= -->
+<!-- FLOATING AI CHATBOT -->
+<!-- ========================= -->
+
+<div class="travel-chatbot-wrapper">
+
+  <!-- FLOATING ICON -->
+
+  <button class="chat-toggle-btn" id="chatToggleBtn">
+    💬
+  </button>
+
+  <!-- CHATBOT -->
+
+  <div class="travel-chatbot" id="travelChatbot">
+
+    <!-- HEADER -->
+
+    <div class="chat-header">
+
+      <div class="chat-header-left">
+        <h3>PAK Travel AI</h3>
+        <span>Smart Pakistan Travel Assistant</span>
+      </div>
+
+      <!-- CROSS BUTTON -->
+
+      <button class="close-chat-btn" id="closeChatBtn">
+        ✖
+      </button>
+
+    </div>
+
+    <!-- CHAT AREA -->
+
+    <div class="chat-body" id="chatBody">
+
+      <div class="bot-msg">
+
+        Assalamualaikum 👋 <br><br>
+
+        Main Pakistan AI Travel Assistant hun. <br><br>
+
+        Aap pooch sakte hain:
+        <br><br>
+
+        ✔ Routes <br>
+        ✔ Distance <br>
+        ✔ Safety <br>
+        ✔ Hotels <br>
+        ✔ Budget <br>
+        ✔ Travel Agencies <br>
+        ✔ Weather <br>
+        ✔ Maps <br>
+        ✔ Tour Packages
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="chat-footer">
+
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="Ask about Pakistan tours..."
+      >
+
+      <button id="sendBtn">➤</button>
+
+      <button id="voiceBtn">🎤</button>
+
+    </div>
+
+  </div>
+
+</div>
+  
+<script src="shogran-updated.js"></script>
+</body>
+</html>
